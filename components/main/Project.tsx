@@ -102,7 +102,7 @@ const projects = [
     title: "Portfolio Website",
     description: "My personal portfolio built with Next.js and Tailwind CSS.",
     image: "/portfolio.png",
-    link: "https://my-portfolio.vercel.app",
+    link: "https://portfolio-website-git-main-vikas-gautams-projects-44fbb49c.vercel.app/",
   },
   {
     id: 3,
