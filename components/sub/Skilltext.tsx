@@ -39,7 +39,7 @@ const Skilltext: React.FC = () => {
         variants={slideInFromRight(0.5)}
         className="cursive text-lg sm:text-xl text-gray-200 mb-10 mt-4 text-center"
       >
-        Never miss a task, deadline or idea
+        I get the job done. Am not the fastest! but perfect!
       </motion.div>
     </div>
   );

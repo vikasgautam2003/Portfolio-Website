@@ -1,3 +1,6 @@
+
+
+
 "use client";
 
 import { Socials } from "@/constants";
@@ -5,6 +8,17 @@ import React from "react";
 import Image from "next/image";
 
 const Navbar = () => {
+  // Array of your social media links
+  const socialLinks = [
+    "https://www.facebook.com/profile.php?id=100010620193214",
+     "https://www.instagram.com/vikasgautam_385?igsh=MWQwazE0bXZkZ3h3Zw==",
+    
+    "https://github.com/vikasgautam2003",
+    "http://www.linkedin.com/in/vikas-gautam-ab5ab8278",
+    
+   
+  ];
+
   return (
     <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-4 sm:px-10">
       <div className="w-full h-full flex flex-row items-center justify-between m-auto">
@@ -13,11 +27,11 @@ const Navbar = () => {
           className="h-auto w-auto flex flex-row items-center"
         >
           <Image
-            src="/NavLogo.png"
+            src="/DSC_5412.JPG"
             alt="logo"
-            width={70}
-            height={70}
-            className="cursor-pointer hover:animate-slowspin"
+            width={35}
+            height={35}
+            className="cursor-pointer hover:animate-slowspin rounded-full"
             priority
           />
           <span className="font-bold ml-[10px] hidden md:block text-gray-300">
@@ -40,14 +54,20 @@ const Navbar = () => {
         </div>
 
         <div className="flex flex-row gap-5">
-          {Socials.map((social) => (
-            <Image
-              src={social.src}
-              alt={social.name}
+          {Socials.map((social, index) => (
+            <a
+              href={socialLinks[index]}
               key={social.name}
-              width={24}
-              height={24}
-            />
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={social.src}
+                alt={social.name}
+                width={24}
+                height={24}
+              />
+            </a>
           ))}
         </div>
       </div>

@@ -34,7 +34,7 @@ const Footer = () => {
             </li>
             <li>
               <Link href="#" target="_blank" className="hover:text-purple-400">
-                Another Project
+                V Shiksha
               </Link>
             </li>
           </ul>
@@ -44,19 +44,17 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Social Media</h3>
           <div className="flex space-x-4 text-xl">
-            <Link href="https://facebook.com" target="_blank" className="hover:text-purple-400">
+            <Link href="https://www.facebook.com/profile.php?id=100010620193214" target="_blank" className="hover:text-purple-400">
               <FaFacebook />
             </Link>
-            <Link href="https://instagram.com" target="_blank" className="hover:text-purple-400">
+            <Link href="https://www.instagram.com/vikasgautam_385?igsh=MWQwazE0bXZkZ3h3Zw==" target="_blank" className="hover:text-purple-400">
               <FaInstagram />
             </Link>
-            <Link href="https://discord.com" target="_blank" className="hover:text-purple-400">
-              <FaDiscord />
-            </Link>
-            <Link href="https://github.com" target="_blank" className="hover:text-purple-400">
+           
+            <Link href="https://github.com/vikasgautam2003" target="_blank" className="hover:text-purple-400">
               <FaGithub />
             </Link>
-            <Link href="https://linkedin.com" target="_blank" className="hover:text-purple-400">
+            <Link href="http://www.linkedin.com/in/vikas-gautam-ab5ab8278" target="_blank" className="hover:text-purple-400">
               <FaLinkedin />
             </Link>
           </div>
@@ -65,8 +63,8 @@ const Footer = () => {
         {/* Column 4 - Contact */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
-          <p className="text-sm">📞 +91 98765 43210</p>
-          <p className="text-sm">📧 vikas@example.com</p>
+          <p className="text-sm">📞 +91 98776 19409</p>
+          <p className="text-sm">📧 vikasgautamug@gmail.com</p>
           <p className="text-sm">📍 New Delhi, India</p>
         </div>
       </div>
