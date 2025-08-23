@@ -26,11 +26,11 @@ const projects = [
   },
   {
     id: 3,
-    title: "Shiksha Kendra",
-    description:
-      "A place where students or even professional can learn from courses.",
-    image: "/development.jpg",
-    link: "#", // No link for development project
+    title: "CogniCare AI",
+    description: 
+      "Your Personal Mental Therapist.",
+    image: "/ss.png",
+    link: "https://cogni-care-your-supportive-chatbot.vercel.app/", 
   },
 ];
 
