@@ -278,6 +278,7 @@ export default function ProjectSection() { // Renamed from App to be more descri
                       autoPlay
                       loop
                       muted
+                      poster={selectedProject.images[0]}
 
                     />
                   </div>
