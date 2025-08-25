@@ -270,11 +270,11 @@ export default function ProjectSection() { // Renamed from App to be more descri
                 </p>
 
                 {selectedProject.video && (
-                  <div className="mb-8 rounded-2xl overflow-hidden border border-white/10">
+                  <div className="mb-8 rounded-2xl overflow-hidden border border-white/10 aspect-video">
                     <video
                       src={selectedProject.video}
-                      controls
-                      className="w-full"
+                      // controls
+                      className="w-full  object-cover"
                       autoPlay
                       loop
                       muted
@@ -298,7 +298,7 @@ export default function ProjectSection() { // Renamed from App to be more descri
                     </div>
                   ))}
                 </div>
-
+{/* 
                 <div className="flex justify-center">
                   <a
                     href={selectedProject.link}
@@ -309,6 +309,30 @@ export default function ProjectSection() { // Renamed from App to be more descri
                     View Project
                   </a>
                 </div>
+                 <div className="flex justify-center">
+                 <button className="mt-8 inline-block text-center bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-full text-white text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+                  onClick={() => setSelectedProject(null)}
+                  >
+                  Close
+                 </button>
+                </div> */}
+                <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+                    <a
+                      href={selectedProject.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 text-center bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-full text-white text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+                    >
+                      View Project
+                    </a>
+                    <button
+                      className="flex-1 text-center bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-full text-white text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+                      onClick={() => setSelectedProject(null)}
+                    >
+                      Close
+                    </button>
+                  </div>
+
               </div>
             </motion.div>
           </motion.div>

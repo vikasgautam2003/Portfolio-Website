@@ -220,8 +220,10 @@ export const skills: Skill[] = [
   { name: "C++", image: "https://placehold.co/80x80/00599C/FFFFFF?text=C%2B%2B", category: "Languages", description: "A high-performance language used in systems programming and game development." },
   { name: "Python", image: "https://placehold.co/80x80/3776AB/FFFFFF?text=Py", category: "Languages", description: "A versatile language popular for web development, data science, and AI." },
   { name: "Java", image: "https://placehold.co/80x80/f89820/FFFFFF?text=Java", category: "Languages", description: "A class-based, object-oriented language for large-scale enterprise applications." },
-  { name: "Docker", image: "https://placehold.co/80x80/249ED8/FFFFFF?text=Docker", category: "DevOps", description: "A platform for developing, shipping, and running applications in containers." },
   { name: "Vercel", image: "https://placehold.co/80x80/000000/FFFFFF?text=Vercel", category: "DevOps", description: "A cloud platform for static sites and Serverless Functions that fits perfectly with Next.js." },
+  { name: "Render", image: "https://placehold.co/80x80/000000/FFFFFF?text=Render", category: "DevOps", description: "A platform for building and deploying Next.js applications with ease." }, 
+  { name: "Docker", image: "https://placehold.co/80x80/249ED8/FFFFFF?text=Docker", category: "DevOps", description: "A platform for developing, shipping, and running applications in containers." },
+  { name: "MongoDB", image: "https://placehold.co/80x80/47A248/FFFFFF?text=Mongo", category: "Backend", description: "A popular NoSQL database for storing and retrieving data." }
 ];
 
 export const categories = ["Frontend", "Backend", "Languages", "DevOps"];
