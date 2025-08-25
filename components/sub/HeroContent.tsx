@@ -300,7 +300,7 @@ const HeroContent: React.FC = () => {
             Get In Touch
           </a>
           <a
-            href="/imp/resume.docx"
+            href="/project/Resume.pdf"
             download
             className="py-3 px-8 border-2 border-white/50 text-white font-semibold rounded-lg shadow-lg hover:bg-white/10 hover:scale-105 transition-all duration-300 cursor-pointer"
           >
