@@ -446,7 +446,7 @@ const projects: Project[] = [
     images: ["/project/bonzo.png", "/project/bonzo1.png", "/project/bonzo2.png"],
     video: "/project/bonzoVideo.mp4",
     link: "https://bonzo-gaming-website.onrender.com",
-    sourceCode: "https://github.com/yourusername/bonzo-games",
+    sourceCode: "https://github.com/vikasgautam2003/Bonzo-Gaming-Website",
     tech: ["Socket.IO", "Node.js", "MongoDB", "JWT", "Tailwind CSS", "JavaScript", "EJS"],
   },
   {
@@ -465,7 +465,7 @@ const projects: Project[] = [
     ],
     images: ["/project/portfolio.png", "/project/portfolio1.png", "/project/portfolio2.png"],
     link: "https://portfolio-website-git-main-vikas-gautams-projects-44fbb49c.vercel.app/",
-    sourceCode: "https://github.com/yourusername/portfolio-website",
+    sourceCode: "https://github.com/vikasgautam2003/Portfolio-Website",
     tech: ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript"],
     video: "/project/portfolio.mp4",
   },
@@ -485,7 +485,7 @@ const projects: Project[] = [
     ],
     images: ["/project/cogni1.png", "/project/cogni.png", "/project/cogni2.png"],
     link: "https://cogni-care-your-supportive-chatbot.vercel.app/",
-    sourceCode: "https://github.com/yourusername/cognicare-ai",
+    sourceCode: "https://github.com/vikasgautam2003/CogniCare---Your-Supportive-Chatbot",
     tech: ["Next.js", "Gemini AI", "Tailwind CSS", "TypeScript"],
     video: "/project/cogniVideo.mp4",
   },
@@ -505,8 +505,8 @@ const projects: Project[] = [
     ],
     images: ["/project/multi.png", "/project/multi2.png", "/project/multi3.png"],
     video: "/project/multi.mp4",
-    link: "https://github.com/yourusername/multithreaded-java-server",
-    sourceCode: "https://github.com/yourusername/multithreaded-java-server",
+    link: "https://github.com/vikasgautam2003/Multithreaded-Web-server",
+    sourceCode: "https://github.com/vikasgautam2003/Multithreaded-Web-server",
     tech: ["Java", "Sockets", "Concurrency"]
   }
 ];
