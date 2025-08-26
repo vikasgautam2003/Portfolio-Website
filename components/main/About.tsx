@@ -65,7 +65,7 @@ const About: React.FC = () => {
           className="absolute top-1/4 left-1/4 w-32 h-48 sm:w-48 sm:h-64 md:w-56 md:h-72 z-10"
         >
           <img
-            src="/about/vikas.png"
+            src="/about/vikas2.png"
             alt="Collage Image 2"
             className="w-full h-full object-cover rounded-2xl shadow-2xl border-2 border-slate-800"
           />
@@ -75,7 +75,7 @@ const About: React.FC = () => {
           className="absolute top-1/2 left-1/2 w-32 h-48 sm:w-48 sm:h-64 md:w-56 md:h-72 z-20"
         >
           <img
-            src="/about/vikas2.png"
+            src="/about/vikas.png"
             alt="Collage Image 3"
             className="w-full h-full object-cover rounded-2xl shadow-2xl border-2 border-slate-800"
           />

@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
 
+body.modal-open {
+  overflow: hidden;
+}
+
 
 .cursive {
   font-family: "Cedarville Cursive", cursive;
