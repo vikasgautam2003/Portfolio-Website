@@ -55,7 +55,7 @@ export default function Home() {
               <Project />
             </section>
 
-            <section className="w-full pt-16" id="contact">
+            <section className="w-full pt-100" id="contact">
               <Contact />
             </section>
 

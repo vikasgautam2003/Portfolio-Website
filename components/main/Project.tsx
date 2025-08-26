@@ -679,7 +679,7 @@ export default function ProjectSection() {
             >
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-6 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 lg:top-10 lg:right-10 text-white z-50 bg-black/50 p-2 rounded-full hover:bg-white/20 transition-colors text-2xl"
+                className="absolute top-6 right-4 sm:top-20 sm:right-6 md:top-8 md:right-8 lg:top-10 lg:right-10 text-white z-50 bg-black/50 p-2 rounded-full hover:bg-white/20 transition-colors text-2xl"
               >
                 <FiX />
               </button>
@@ -764,6 +764,13 @@ export default function ProjectSection() {
                          Source Code <FiGithub />
                        </a>
                     )}
+                    <button  
+                     className="w-full sm:w-auto flex items-center justify-center gap-2 text-center bg-purple-600 hover:bg-purple-700 px-8 py-3 rounded-full text-white text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+                     onClick={() => setSelectedProject(null)}
+                    >
+                        Close <FiX />
+
+                    </button>
                 </div>
 
               </div>
