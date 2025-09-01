@@ -67,24 +67,25 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Portfolio Website",
-    description: "My personal portfolio built with Next.js and Tailwind CSS.",
+    title: "Hostel Committee Website",
+    description: "A full-stack platform for managing hostel events, student participation, and discussions.",
     longDescriptions: [
-      "This portfolio website showcases projects, skills, and achievements with a dynamic, responsive, and visually appealing interface.",
-      "Built with Next.js, Tailwind CSS, and Framer Motion, it ensures smooth transitions, SEO optimization, and strong TypeScript type safety."
+        "This website allows admins to create and manage hostel events, while students can register, participate, and engage in discussions.",
+        "It features secure JWT authentication, media uploads via Cloudinary, responsive design, and a dynamic interface built with React for a smooth user experience."
     ],
-    images: ["/project/portfolio.png", "/project/portfolio1.png", "/project/portfolio2.png"],
-    video: "/project/portfolio.mp4",
-    link: "https://portfolio-website-git-main-vikas-gautams-projects-44fbb49c.vercel.app/",
-    sourceCode: "https://github.com/vikasgautam2003/Portfolio-Website",
-    tech: ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript"],
+    images: ["/project/hostel2.png", "/project/hostel1.png", "/project/hostel.png"],
+    video: "/project/hostel.mp4",
+    link: "https://hostel-committee-full-stack-website-vsa3.onrender.com/",
+    sourceCode: "https://github.com/vikasgautam2003/hostel-committee-full-stack-website",
+    tech: ["Node.js", "Express.js", "MongoDB", "React", "Cloudinary", "JWT"],
     keyFeatures: [
-      "Dynamic project showcase",
-      "Responsive layout",
-      "Smooth animations with Framer Motion",
-      "SEO optimized"
+        "Event creation and management",
+        "Student registration for events",
+        "Discussion forum for hostel residents",
+        "Secure media uploads with Cloudinary"
     ]
-  },
+}
+,
   {
     id: 3,
     title: "CogniCare AI",
@@ -96,7 +97,7 @@ const projects: Project[] = [
     images: ["/project/cogni1.png", "/project/cogni.png", "/project/cogni2.png"],
     video: "/project/cogniVideo.mp4",
     link: "https://cogni-care-your-supportive-chatbot.vercel.app/",
-    sourceCode: "https://github.com/vikasgautam2003?tab=repositories",
+    sourceCode: "https://github.com/vikasgautam2003/CogniCare---Your-Supportive-Chatbot",
     tech: ["Next.js", "Gemini AI", "Tailwind CSS", "TypeScript"],
     keyFeatures: [
       "AI-based mental health support",
@@ -121,7 +122,7 @@ const projects: Project[] = [
     keyFeatures: [
       "High-performance multithreading",
       "Concurrent client handling",
-      "Custom thread pool implementation",
+      "Can handle upto 10000 requests simultaneously(depending on the device)",
       "Detailed logging and monitoring"
     ]
   }
