@@ -206,6 +206,15 @@ export default function ProjectSection() {
               <div className="p-6 sm:p-10">
                 <p className="text-base sm:text-lg text-gray-300 mb-4 font-bold">{selectedProject.description}</p>
 
+
+                {selectedProject.id === 2 && (
+                  <div className="mb-6 p-4 rounded-lg bg-yellow-900/20 border-l-4 border-yellow-500">
+                    <p className="text-yellow-400 text-sm sm:text-base font-medium leading-relaxed">
+                      Currently in development. Users may experience some issues. Nonetheless, the application is fully operational, so feel free to explore and provide feedback.
+                    </p>
+                  </div>
+                )}
+
                 {/* TWO LONG DESCRIPTIONS */}
                 {selectedProject.longDescriptions.map((ld, idx) => (
                   <p key={idx} className="text-gray-300 text-sm sm:text-base mb-4">{ld}</p>
