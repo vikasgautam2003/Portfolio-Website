@@ -141,7 +141,7 @@ const About: React.FC = () => {
 
         <motion.a
           variants={itemVariants}
-          href="/project/Resume.pdf"
+          href="/project/resume1.pdf"
           download
           className="mt-6 py-3 px-6 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer flex items-center gap-2"
         >
