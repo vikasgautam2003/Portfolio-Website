@@ -15,6 +15,7 @@ import Contact from "@/components/main/Contact";
 import PreLoader from "@/components/main/PreLoader";
 import { AnimatePresence } from "framer-motion";
 import Platforms from "@/components/main/Platform";
+import AiProjects from "@/components/main/AiProjects";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -55,7 +56,12 @@ export default function Home() {
             <section className="w-full py-16" id="projects">
               <Project />
             </section>
-            <section className="w-full pt-16" id="projects">
+
+            <section className="w-full py-16">
+              <AiProjects />
+            </section>
+
+            <section className="w-full pt-16">
               <Platforms />
             </section>
 

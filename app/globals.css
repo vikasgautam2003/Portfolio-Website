@@ -12,6 +12,10 @@ body.modal-open {
 }
 
 
+.navbar-hidden {
+  display: none !important;
+}
+
 
 
 
