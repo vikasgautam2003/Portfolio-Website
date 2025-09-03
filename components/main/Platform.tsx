@@ -331,6 +331,16 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -385,7 +395,7 @@ const platforms: Platform[] = [
     link: "https://github.com/vikasgautam2003",
     details: {
       showcase: {
-        title: "Featured Repository Showcase",
+        title: "Explore 50+ Projects",
         image: "/sites/git1.png",
       },
       repos: [
@@ -556,24 +566,22 @@ export default function Platforms() {
 
       <AnimatePresence>
         {selectedPlatform && (
-            // ## FIX: On mobile, the entire modal is now scrollable (overflow-y-auto)
-            // On desktop, it remains fixed with the two-panel layout (md:overflow-hidden)
+          // ## FIX: The entire modal is now scrollable on all screen sizes.
           <motion.div 
             initial={{ opacity: 0 }} 
             animate={{ opacity: 1 }} 
             exit={{ opacity: 0 }} 
-            className="fixed inset-0 bg-black/50 backdrop-blur-xl z-50 overflow-y-auto md:overflow-hidden"
+            className="fixed inset-0 bg-black/50 backdrop-blur-xl z-50 overflow-y-auto"
           >
-            {/* ## FIX: A new wrapper to handle the layout switch between mobile and desktop */}
-            <div className="min-h-full flex flex-col md:flex-row">
+            {/* ## FIX: This wrapper allows the two-panel layout on desktop while being part of a single scroll on mobile. */}
+            <div className="min-h-full md:flex">
                 {/* Left Panel */}
                 <motion.div 
                 initial={{ x: "-100%" }} animate={{ x: "0%" }} exit={{ x: "-100%" }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                // ## FIX: Panel is now a standard block on mobile, not flex-grow, and is part of the scroll
-                className="w-full md:w-1/3 md:h-full border-b md:border-b-0 md:border-r border-white/10 p-6 sm:p-8 md:p-12 pt-20 md:pt-24 pb-8 md:pb-12 relative flex flex-col"
+                className="w-full md:w-1/3 md:h-screen md:sticky top-0 border-b md:border-b-0 md:border-r border-white/10 p-6 sm:p-8 md:p-12 pt-20 md:pt-24 pb-8 md:pb-12 relative flex flex-col"
                 >
-                    <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{backgroundImage: `url(${selectedPlatform.panelImage})`}}></div>
+                    <div className="absolute inset-0 bg-cover bg-center opacity-90" style={{backgroundImage: `url(${selectedPlatform.panelImage})`}}></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900"></div>
 
                     <div className="relative z-10 flex flex-col h-full">
@@ -590,18 +598,16 @@ export default function Platforms() {
                 <motion.div
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
-                // ## FIX: Removed flex-grow and overflow-y-auto for mobile. Restored for desktop.
-                className="w-full md:w-2/3 md:h-full md:overflow-y-auto relative"
+                className="w-full md:w-2/3 relative"
                 >
                     <div className="absolute inset-0 bg-[url('https://raw.githubusercontent.com/kamranahmedse/driver.js/master/docs/images/bg-pattern.svg')] opacity-10"></div>
                     
                     <div className="relative p-6 sm:p-8 md:p-12 pb-12">
-                        {/* ## FIX: On mobile, the close button is part of the scroll, so it's not absolutely positioned to the viewport. */}
-                        <button onClick={() => setSelectedPlatform(null)} className="absolute top-6 right-6 text-white z-50 p-2 rounded-full hover:bg-white/10 transition-colors">
+                        <button onClick={() => setSelectedPlatform(null)} className="fixed top-6 right-6 text-white z-[60] p-2 rounded-full hover:bg-white/10 transition-colors">
                             <CloseIcon />
                         </button>
                         
-                        <div className="space-y-12 pt-12 md:pt-0"> {/* Added top padding for mobile to space from close button */}
+                        <div className="space-y-12 pt-12 md:pt-0">
                             <div className="space-y-6">
                                 <h3 className="text-3xl sm:text-4xl font-bold text-white border-b border-white/10 pb-4">{selectedPlatform.details.showcase.title}</h3>
                                 <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
