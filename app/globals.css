@@ -6,6 +6,15 @@ body.modal-open {
 }
 
 
+
+.navbar-unsticky {
+  position: static !important;
+}
+
+
+
+
+
 .cursive {
   font-family: "Cedarville Cursive", cursive;
 }
