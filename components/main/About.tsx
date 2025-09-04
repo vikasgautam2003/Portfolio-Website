@@ -1,44 +1,92 @@
-
-
-
 "use client";
 
-import React, { useRef } from "react";
-import { motion, Variants, useScroll, useTransform } from "framer-motion";
+import React, { useRef, useEffect } from "react";
+import {
+  motion,
+  Variants,
+  useTransform,
+  useMotionValue,
+  animate,
+} from "framer-motion";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
+
+// A reusable SVG icon component for LinkedIn
+const LinkedInIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className="w-6 h-6"
+  >
+    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+  </svg>
+);
+
+// New AnimatedCounter component to "flex" the CGPA
+interface AnimatedCounterProps {
+  to: number;
+}
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ to }) => {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => latest.toFixed(2));
+
+  useEffect(() => {
+    const controls = animate(count, to, {
+      duration: 2, // Animation duration
+      ease: "easeOut",
+    });
+    return controls.stop;
+  }, [to, count]);
+
+  return <motion.span>{rounded}</motion.span>;
+};
+
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
+    transition: { staggerChildren: 0.15, delayChildren: 0.2 },
   },
 };
 
 const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeInOut",
-    },
-  },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
-const About: React.FC = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
+// Skill data array for easier management
+const skills = [
+  { name: "Next.js", icon: "📦" },
+  { name: "MERN Stack", icon: "📚" },
+  { name: "Databases", icon: "🗃️" },
+  { name: "AI / ML", icon: "🤖" },
+  { name: "Deployment", icon: "🚀" },
+  { name: "DSA", icon: "💻" },
+  { name: "LLM", icon: "🧠"},
+];
 
-  const y1 = useTransform(scrollYProgress, [0, 1], [-50, 50]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [50, -50]);
-  const y3 = useTransform(scrollYProgress, [0, 1], [-25, 25]);
+const About: React.FC = () => {
+  const ref = useRef<HTMLElement>(null);
+  
+  const mouseX = useMotionValue(Infinity);
+  const mouseY = useMotionValue(Infinity);
+
+  const rotateX = useTransform(mouseY, [0, 500], [20, -20]);
+  const rotateY = useTransform(mouseX, [0, 500], [-20, 20]);
+
+  function handleMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent<HTMLDivElement, MouseEvent>) {
+    const { left, top } = currentTarget.getBoundingClientRect();
+    mouseX.set(clientX - left);
+    mouseY.set(clientY - top);
+  }
+
+  function handleMouseLeave() {
+    mouseX.set(Infinity);
+    mouseY.set(Infinity);
+  }
 
   return (
     <motion.section
@@ -47,111 +95,109 @@ const About: React.FC = () => {
       whileInView="visible"
       variants={containerVariants}
       viewport={{ once: true, amount: 0.2 }}
-      className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center justify-center min-h-screen w-full px-6 sm:px-10 lg:px-20 py-16 md:py-20 z-[20] overflow-hidden"
+      className="relative grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-center min-h-screen w-full px-6 sm:px-10 lg:px-20 py-24 overflow-hidden"
     >
-      <div className="relative h-[350px] sm:h-[450px] w-full max-w-xs sm:max-w-sm mx-auto md:max-w-none md:mx-0">
-        <motion.div
-          style={{ y: y1 }}
-          className="absolute top-0 left-0 w-32 h-48 sm:w-48 sm:h-64 md:w-56 md:h-72"
-        >
-          <img
-            src="/about/vikas4.png"
-            alt="Collage Image 1"
-            className="w-full h-full object-cover rounded-2xl shadow-2xl border-2 border-slate-800"
-          />
-        </motion.div>
-        <motion.div
-          style={{ y: y2 }}
-          className="absolute top-1/4 left-1/4 w-32 h-48 sm:w-48 sm:h-64 md:w-56 md:h-72 z-10"
-        >
-          <img
-            src="/about/vikas2.png"
-            alt="Collage Image 2"
-            className="w-full h-full object-cover rounded-2xl shadow-2xl border-2 border-slate-800"
-          />
-        </motion.div>
-        <motion.div
-          style={{ y: y3 }}
-          className="absolute top-1/2 left-1/2 w-32 h-48 sm:w-48 sm:h-64 md:w-56 md:h-72 z-20"
+      {/* LEFT COLUMN - 3D INTERACTIVE IMAGE */}
+      <motion.div
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          rotateX,
+          rotateY,
+          transformStyle: "preserve-3d", // FIXED: Moved inside style object
+        }}
+        variants={itemVariants}
+        className="relative w-full max-w-sm mx-auto lg:max-w-md h-[400px] sm:h-[500px] rounded-3xl bg-slate-900/40 border border-white/10 shadow-2xl transition-all duration-300"
+      >
+        <div 
+          style={{ transform: "translateZ(50px)" }}
+          className="absolute inset-5"
         >
           <img
             src="/about/vikas.png"
-            alt="Collage Image 3"
-            className="w-full h-full object-cover rounded-2xl shadow-2xl border-2 border-slate-800"
+            alt="Vikas"
+            className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
-        </motion.div>
-      </div>
+        </div>
+        <div 
+          style={{ transform: "translateZ(20px)" }}
+          className="absolute inset-0 rounded-3xl border-2 border-purple-500/50 shadow-2xl shadow-purple-500/20" 
+        />
+      </motion.div>
 
+      {/* RIGHT COLUMN - TEXT CONTENT */}
       <motion.div
         variants={containerVariants}
-        className="flex flex-col gap-5 max-w-xl text-center md:text-start items-center md:items-start"
+        className="flex flex-col gap-6 max-w-xl text-center lg:text-start items-center lg:items-start"
       >
         <motion.h2
           variants={itemVariants}
-          className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white"
+          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white"
         >
           About
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-            {" "}
-            Me
+            {" "}Me
           </span>
         </motion.h2>
 
-        <motion.p
-          variants={itemVariants}
-          className="text-lg sm:text-xl lg:text-2xl text-gray-300"
-        >
+        <motion.p variants={itemVariants} className="text-base sm:text-lg text-gray-300">
           My passion for software development stems from a love for creative
           problem-solving. I thrive on turning complex challenges into elegant,
           user-friendly applications.
         </motion.p>
         
-        <motion.div variants={itemVariants} className="w-full mt-4">
-            <div className="bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center">
-                <p className="text-lg text-gray-300">Academic CGPA</p>
-                <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">9.39</p>
-            </div>
+        <motion.div variants={itemVariants} className="w-full max-w-xs lg:max-w-none mt-4">
+          <div className="bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-xl p-5 text-center transition-all duration-300 hover:border-cyan-400/50 hover:shadow-cyan-500/10">
+            <p className="text-md sm:text-lg text-gray-300 uppercase tracking-widest">Academic CGPA</p>
+            <p className="text-5xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
+               <AnimatedCounter to={9.39} />
+            </p>
+          </div>
         </motion.div>
 
         <motion.div variants={itemVariants} className="w-full mt-4">
             <h3 className="text-2xl font-semibold text-white mb-4">Core Skills</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                <div className="flex items-center gap-3 bg-slate-900/50 p-3 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-cyan-400"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-                    <span className="text-gray-300">Next.js</span>
-                </div>
-                <div className="flex items-center gap-3 bg-slate-900/50 p-3 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-cyan-400"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
-                    <span className="text-gray-300">MERN Stack</span>
-                </div>
-                <div className="flex items-center gap-3 bg-slate-900/50 p-3 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-cyan-400"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
-                    <span className="text-gray-300">Databases</span>
-                </div>
-                <div className="flex items-center gap-3 bg-slate-900/50 p-3 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-cyan-400"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-                    <span className="text-gray-300">Deployment</span>
-                </div>
-                <div className="flex items-center gap-3 bg-slate-900/50 p-3 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-cyan-400"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                    <span className="text-gray-300">DSA</span>
-                </div>
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3">
+                {skills.map(skill => (
+                    <motion.div 
+                        key={skill.name}
+                        whileHover={{ y: -4, scale: 1.05 }}
+                        className="flex items-center gap-2 bg-slate-800/60 border border-slate-700 rounded-lg px-4 py-2 text-sm text-gray-200"
+                    >
+                        <span>{skill.icon}</span>
+                        <span>{skill.name}</span>
+                    </motion.div>
+                ))}
             </div>
         </motion.div>
 
-        <motion.a
-          variants={itemVariants}
-          href="/project/resume1.pdf"
-          download
-          className="mt-6 py-3 px-6 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer flex items-center gap-2"
-        >
-          <ArrowDownTrayIcon className="w-5 h-5" />
-          Download CV
-        </motion.a>
+        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 mt-8 w-full justify-center lg:justify-start">
+           <motion.a
+            href="https://www.linkedin.com/in/vikas-gautam-ab5ab8278/"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center gap-3 w-full sm:w-auto justify-center py-3 px-6 bg-sky-600 text-white font-semibold rounded-lg shadow-lg hover:bg-sky-500 transition-all duration-300"
+          >
+            <LinkedInIcon />
+            Connect with Me
+          </motion.a>
+
+          <motion.a
+            href="/project/resume1.pdf"
+            download
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center gap-3 w-full sm:w-auto justify-center py-3 px-6 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg shadow-lg transition-all duration-300"
+          >
+            <ArrowDownTrayIcon className="w-6 h-6" />
+            Download CV
+          </motion.a>
+        </motion.div>
       </motion.div>
     </motion.section>
   );
 };
 
 export default About;
-

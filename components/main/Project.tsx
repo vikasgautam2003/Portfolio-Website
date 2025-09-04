@@ -326,10 +326,7 @@ export default function ProjectSection() {
         )}
       </AnimatePresence>
 
-      <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }} viewport={{ once: true, amount: 0.2 }} className="absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white hidden sm:flex">
-        <span className="text-sm uppercase tracking-widest">Scroll Down</span>
-        <div className="text-2xl animate-bounce"><FiChevronsDown /></div>
-      </motion.div>
+     
     </motion.section>
   );
 }
