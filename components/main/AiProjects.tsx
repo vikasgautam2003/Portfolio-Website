@@ -90,7 +90,33 @@ const aiProjects: AiProject[] = [
     video: "/project/X.mp4",
     sourceCodeLink: "https://huggingface.co/spaces/vikasgautam2003/Xplain__Your_topic_Explainer",
     liveDemoLink: "https://xplain-your-topic-explainer.onrender.com",
-  }
+  }, 
+
+  
+{
+    id: 4,
+    category: "LLM",
+    title: "Cold Email Generator",
+    description: "An AI-powered app for generating personalized cold emails.",
+    longDescriptions: [
+        "This Streamlit app allows users to create effective and professional cold emails tailored to recipients using AI.",
+        "Users can input recipient details, context, and preferences, and the system generates ready-to-send email drafts. It leverages LLMs for high-quality, context-aware email generation."
+    ],
+    keyFeatures: [
+        "AI-powered personalized cold email generation",
+        "Interactive Streamlit interface",
+        "Customizable email templates",
+        "Hosted on Hugging Face Spaces"
+    ],
+    tech: ["Python", "Streamlit", "LangChain", "OpenAI API", "Hugging Face Spaces"],
+    images: ["/project/cold.png"],
+    video: "/project/cold.mp4",
+    sourceCodeLink: "https://huggingface.co/spaces/vikasgautam2003/cold_email_generator/tree/main",
+    liveDemoLink: null,
+    
+}
+
+
 ];
 
 
@@ -221,7 +247,7 @@ export default function AiProjects() {
                                 </a>
                                 ) : (
                                 <div className="flex-1 flex items-center justify-center px-6 py-3 rounded-lg text-gray-400 text-sm bg-slate-800/50 border border-dashed border-gray-600 text-center">
-                                    Ollama projects require significant resources (RAM/CPU) and are not suitable for live hosting.
+                                    Not Hosted yet
                                 </div>
                                 )}
                             </div>

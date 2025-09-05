@@ -125,7 +125,9 @@ const projects: Project[] = [
       "Can handle upto 10000 requests simultaneously(depending on the device)",
       "Detailed logging and monitoring"
     ]
-  }
+  }, 
+
+  
 ];
 
 // --- ANIMATION VARIANTS ---

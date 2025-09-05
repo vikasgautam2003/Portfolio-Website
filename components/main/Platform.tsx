@@ -388,14 +388,14 @@ const platforms: Platform[] = [
     id: 1,
     name: "GitHub",
     logo: "/github.svg",
-    tagline: "Home to 50+ Projects",
+    tagline: "Home to 40+ Projects",
     description: "My GitHub profile is a testament to my passion for coding, featuring a diverse collection of over 50 projects, showcasing my journey and expertise in software development.",
     backgroundImage: "/sites/git2.png",
     panelImage: "/sites/git.png", 
     link: "https://github.com/vikasgautam2003",
     details: {
       showcase: {
-        title: "Explore 50+ Projects",
+        title: "Explore 40+ Projects",
         image: "/sites/git1.png",
       },
       repos: [

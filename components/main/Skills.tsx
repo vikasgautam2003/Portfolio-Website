@@ -31,10 +31,10 @@ export const skills: Skill[] = [
   { name: "Railway", image: "/logos/railway.svg", category: "DevOps", description: "Infrastructure platform for developers." },
   { name: "Gemini API", image: "/logos/gemini.svg", category: "AI", description: "Access Google's powerful generative models." },
   { name: "LangChain", image: "/logos/langchain.svg", category: "AI", description: "Framework for developing LLM applications." },
-  { name: "Streamlit", image: "/logos/streamlit.svg", category: "AI", description: "Build and share data apps, fast." },
+  { name: "Streamlit", image: "/logos/Streamlit.svg", category: "AI", description: "Build and share data apps, fast." },
   { name: "Prompt Engineering", image: "/logos/prompt.svg", category: "AI", description: "Crafting effective inputs for AI models." },
-  { name: "spaCy", image: "/logos/spacy.svg", category: "AI", description: "Industrial-strength Natural Language Processing." },
-  { name: "Pandas", image: "/logos/pandas.svg", category: "AI", description: "Powerful data analysis and manipulation library." },
+  { name: "spaCy", image: "/logos/Spacy.svg", category: "AI", description: "Industrial-strength Natural Language Processing." },
+  { name: "Pandas", image: "/logos/Pandas.svg", category: "AI", description: "Powerful data analysis and manipulation library." },
   { name: "Dialogflow", image: "/logos/dialogflow.svg", category: "AI", description: "Build conversational AI experiences." },
   { name: "Ollama", image: "/logos/ollama.svg", category: "AI", description: "Run and manage local LLMs easily." },
   { name: "MySQL", image: "/logos/mysql.svg", category: "Backend", description: "The world's most popular open-source database." }
