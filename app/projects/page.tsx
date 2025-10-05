@@ -239,7 +239,7 @@ export default function ProjectSection() {
 
               <div className="p-6 sm:p-8 absolute bottom-0 left-0 right-0">
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 tracking-tight">{project.title}</h3>
-                <p className="text-gray-300 text-sm sm:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300">{project.description}</p>
+                <p className="text-gray-300 text-sm sm:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-7 mb-7">{project.description}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.tech.map((tech) => <span key={tech} className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">{tech}</span>)}
                 </div>
@@ -268,13 +268,14 @@ export default function ProjectSection() {
                 <p className="text-base sm:text-lg text-gray-300 mb-4 font-bold">{selectedProject.description}</p>
 
 
-                {selectedProject.id === 2 && (
+                {[1, 2, 4].includes(selectedProject.id) && (
                   <div className="mb-6 p-4 rounded-lg bg-yellow-900/20 border-l-4 border-yellow-500">
                     <p className="text-yellow-400 text-sm sm:text-base font-medium leading-relaxed">
                       Currently in development. Users may experience some issues. Nonetheless, the application is fully operational, so feel free to explore and provide feedback.
                     </p>
                   </div>
                 )}
+
 
                 {/* TWO LONG DESCRIPTIONS */}
                 {selectedProject.longDescriptions.map((ld, idx) => (
