@@ -568,7 +568,7 @@ export default function ProjectSection() {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push("/projects");
+     window.location.href = "/projects";
   };
 
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
