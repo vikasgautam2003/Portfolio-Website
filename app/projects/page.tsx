@@ -58,7 +58,7 @@ const projects: Project[] = [
     "video": "/project/s.mp4",
     "link": "https://sentinalai-jade.vercel.app/",
     "sourceCode": "https://github.com/vikasgautam2003/ai_cheating_in_test_detector",
-    "tech": ["Next.js", "TypeScript", "Node.js", "Express", "FastAPI", "Python", "MongoDB", "Socket.IO", "JWT", "OpenCV", "WebRTC", "Tailwind CSS", "Docker", "Vercel", "Render"],
+    "tech": ["Next.js", "Node.js","FastAPI", "Python", "MongoDB", "Socket.IO", "OpenCV", "WebRTC"],
     "keyFeatures": [
       "Real-time AI proctoring (face, voice, and tab-switch detection)",
       "Two-tiered violation system (Fatal Strikes & Suspicion Score)",
@@ -253,13 +253,13 @@ export default function ProjectSection() {
       <AnimatePresence>
         {selectedProject && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black/80 backdrop-blur-lg z-50 flex items-center justify-center p-4" onClick={() => setSelectedProject(null)}>
-            <motion.div variants={modalVariants} initial="hidden" animate="visible" exit="exit" className="bg-slate-900/70 border border-white/20 rounded-3xl w-full max-w-4xl h-[90vh] overflow-y-auto shadow-2xl relative" onClick={(e) => e.stopPropagation()}>
+            <motion.div variants={modalVariants} initial="hidden" animate="visible" exit="exit" className="bg-slate-900/70 border border-white/20 rounded-3xl w-full max-w-4xl h-[100vh] overflow-y-auto shadow-2xl relative" onClick={(e) => e.stopPropagation()}>
               <button onClick={() => setSelectedProject(null)} className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white z-50 bg-black/50 p-2 rounded-full hover:bg-white/20 transition-colors text-2xl"><FiX /></button>
 
               <div className="relative h-64 sm:h-96">
                 <Image src={selectedProject.images[0]} alt={selectedProject.title} fill className="object-cover rounded-t-3xl" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
-                <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10">
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-transparent" />
+                <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 mt-10">
                   <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tighter">{selectedProject.title}</h2>
                 </div>
               </div>
