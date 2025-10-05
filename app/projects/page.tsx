@@ -88,20 +88,11 @@ const projects: Project[] = [
   "sourceCode": "https://github.com/vikasgautam2003/query-ai-search-engine",
   "tech": [
     "Next.js",
-    "React",
-    "Tailwind CSS",
     "Node.js",
-    "Express.js",
     "MongoDB",
-    "Mongoose",
-    "JWT",
-    "bcryptjs",
     "SerpApi",
     "Google Gemini API",
-    "GNews API",
-    "OpenWeatherMap API",
-    "Alpha Vantage API",
-    "Web Speech API"
+    "WebRTC"
   ],
   "keyFeatures": [
     "AI-powered answers with real-time web search (SerpApi & Gemini)",

@@ -59,7 +59,7 @@ const projects: Project[] = [
     "video": "/project/s.mp4",
     "link": "https://sentinalai-jade.vercel.app/",
     "sourceCode": "https://github.com/vikasgautam2003/ai_cheating_in_test_detector",
-    "tech": ["Next.js", "TypeScript", "Node.js", "Express", "FastAPI", "Python", "MongoDB", "Socket.IO", "JWT", "OpenCV", "WebRTC", "Tailwind CSS", "Docker", "Vercel", "Render"],
+    "tech": ["Next.js", "Node.js", "FastAPI", "Python", "MongoDB", "Socket.IO", "OpenCV", "WebRTC"],
     "keyFeatures": [
       "Real-time AI proctoring (face, voice, and tab-switch detection)",
       "Two-tiered violation system (Fatal Strikes & Suspicion Score)",
@@ -89,19 +89,10 @@ const projects: Project[] = [
   "sourceCode": "https://github.com/vikasgautam2003/query-ai-search-engine",
   "tech": [
     "Next.js",
-    "React",
-    "Tailwind CSS",
     "Node.js",
-    "Express.js",
     "MongoDB",
-    "Mongoose",
-    "JWT",
-    "bcryptjs",
     "SerpApi",
     "Google Gemini API",
-    "GNews API",
-    "OpenWeatherMap API",
-    "Alpha Vantage API",
     "Web Speech API"
   ],
   "keyFeatures": [
