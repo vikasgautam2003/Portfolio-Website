@@ -6,6 +6,7 @@
 import { Socials } from "@/constants";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   // Array of your social media links
@@ -47,9 +48,9 @@ const Navbar = () => {
             <a href="#skills" className="cursor-pointer">
               Skills
             </a>
-            <a href="#projects" className="cursor-pointer">
+            <Link href="/projects" className="cursor-pointer">
               Projects
-            </a>
+            </Link>
           </div>
         </div>
 

@@ -7,6 +7,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 
+import { useRouter } from "next/navigation";
+
 // --- SVG ICONS ---
 const FiX = () => (
   <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -45,28 +47,75 @@ interface Project {
 
 // --- PROJECT ARRAY ---
 const projects: Project[] = [
+    {
+    "id": 1,
+    "title": "Sentinel.ai Mock Test Platform",
+    "description": "A full-stack, AI-powered proctoring platform to ensure academic integrity in online examinations.",
+    "longDescriptions": [
+      "Sentinel.ai provides a secure and fair environment for online testing, utilizing a sophisticated, multi-service architecture to monitor, detect, and report suspicious activities in real-time.",
+      "The platform features a Next.js frontend, a Node.js backend for core logic, and a separate Python/FastAPI microservice for AI analysis. It leverages OpenCV for visual analysis, WebRTC for real-time streams, and Socket.IO for instant communication, all deployed in a modern cloud environment."
+    ],
+    "images": ["/project/s2.png", "/project/s.png", "/project/s1.png"],
+    "video": "/project/s.mp4",
+    "link": "https://sentinalai-jade.vercel.app/",
+    "sourceCode": "https://github.com/vikasgautam2003/ai_cheating_in_test_detector",
+    "tech": ["Next.js", "TypeScript", "Node.js", "Express", "FastAPI", "Python", "MongoDB", "Socket.IO", "JWT", "OpenCV", "WebRTC", "Tailwind CSS", "Docker", "Vercel", "Render"],
+    "keyFeatures": [
+      "Real-time AI proctoring (face, voice, and tab-switch detection)",
+      "Two-tiered violation system (Fatal Strikes & Suspicion Score)",
+      "Multi-stage, secure test-taking environment with identity verification",
+      "Comprehensive dashboards with analytics for both students and admins",
+      "Full-stack, multi-service architecture with a dedicated, Dockerized AI backend"
+    ]
+  }, 
+
+               
+    {
+  "id": 2,
+  "title": "QueryAI",
+  "description": "An AI-powered answer engine that provides summarized, sourced answers from real-time web results, inspired by Perplexity.",
+  "longDescriptions": [
+    "QueryAI is a full-stack, AI-native search engine designed to move beyond traditional links. It fetches real-time information from the web using SerpApi, then leverages the Google Gemini LLM to synthesize comprehensive, accurate answers with inline citations.",
+    "The platform features a decoupled architecture with a Next.js/React frontend and a custom Express.js backend. It includes a complete user authentication system using JWT, a personalized dashboard with search history, a multi-widget 'Discover' page with live data, and a cutting-edge voice-to-voice conversational chat interface."
+  ],
+  "images": [
+    "/project/q.png",
+    "/project/q1.png",
+    "/project/q2.png",
+    
+  ],
+  "video": "/project/q.mp4",
+  "link": "https://query-ai-five.vercel.app/",
+  "sourceCode": "https://github.com/vikasgautam2003/query-ai-search-engine",
+  "tech": [
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Mongoose",
+    "JWT",
+    "bcryptjs",
+    "SerpApi",
+    "Google Gemini API",
+    "GNews API",
+    "OpenWeatherMap API",
+    "Alpha Vantage API",
+    "Web Speech API"
+  ],
+  "keyFeatures": [
+    "AI-powered answers with real-time web search (SerpApi & Gemini)",
+    "Full user authentication system with JWT (Express & MongoDB)",
+    "Voice-to-voice conversational search interface",
+    "Personalized user dashboard with search history",
+    "Multi-widget 'Discover' page with live news, weather, and market data",
+    "Distinct 'Search' vs. 'Research' modes with different data sources (Google vs. Google Scholar)"
+  ]
+},
+
   {
-    id: 1,
-    title: "Bonzo Games",
-    description: "A happy place where you can play classic games for some fun.",
-    longDescriptions: [
-      "Bonzo Games allows users to connect and play real-time multiplayer games with smooth animations and responsive design across devices.",
-      "The platform is built with Node.js and Socket.IO, providing secure authentication, persistent storage, and an engaging user interface using Tailwind CSS."
-    ],
-    images: ["/project/bonzo.png", "/project/bonzo1.png", "/project/bonzo2.png"],
-    video: "/project/bonzoVideo.mp4",
-    link: "https://bonzo-gaming-website.onrender.com",
-    sourceCode: "https://github.com/vikasgautam2003/Bonzo-Gaming-Website",
-    tech: ["Socket.IO", "Node.js", "MongoDB", "JWT", "Tailwind CSS", "JavaScript", "EJS"],
-    keyFeatures: [
-      "Real-time multiplayer gaming",
-      "User authentication with JWT",
-      "Responsive design with Tailwind CSS",
-      "Interactive UI with animations"
-    ]
-  },
-  {
-    id: 2,
+    id: 3,
     title: "Hostel Committee Website",
     description: "A full-stack platform for managing hostel events, student participation, and discussions.",
     longDescriptions: [
@@ -87,7 +136,7 @@ const projects: Project[] = [
 }
 ,
   {
-    id: 3,
+    id: 4,
     title: "CogniCare AI",
     description: "Your Personal Mental Therapist.",
     longDescriptions: [
@@ -106,26 +155,7 @@ const projects: Project[] = [
       "Secure authentication"
     ]
   },
-  {
-    id: 4,
-    title: "Multithreaded Java Web Server",
-    description: "A high-performance TCP server in Java supporting multiple concurrent clients using a thread pool.",
-    longDescriptions: [
-      "This Java web server manages multiple clients simultaneously using a custom thread pool, ensuring high efficiency and scalability.",
-      "It includes detailed logging, performance monitoring, and demonstrates advanced multithreading and networking concepts for robust server-side applications."
-    ],
-    images: ["/project/multi.png", "/project/multi2.png", "/project/multi3.png"],
-    video: "/project/multi.mp4",
-    link: "https://github.com/vikasgautam2003/Multithreaded-Web-server",
-    sourceCode: "https://github.com/vikasgautam2003/Multithreaded-Web-server",
-    tech: ["Java", "Sockets"],
-    keyFeatures: [
-      "High-performance multithreading",
-      "Concurrent client handling",
-      "Can handle upto 10000 requests simultaneously(depending on the device)",
-      "Detailed logging and monitoring"
-    ]
-  }, 
+
 
   
 ];
@@ -149,6 +179,13 @@ const modalVariants: Variants = {
 
 // --- MAIN COMPONENT ---
 export default function ProjectSection() {
+
+    const router = useRouter();
+
+  const handleClick = () => {
+   window.location.href = "/projects";
+  };
+
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   useEffect(() => {
@@ -189,6 +226,15 @@ export default function ProjectSection() {
             </motion.div>
           ))}
         </motion.div>
+        <div className="flex justify-center mt-20">
+           <button
+        onClick={handleClick}
+        className=" cursor-pointer px-7 py-3 bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-600 text-white font-semibold rounded-xl shadow-[0_0_20px_rgba(139,92,246,0.4)] hover:shadow-[0_0_30px_rgba(236,72,153,0.6)] transition-all duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-fuchsia-400 focus:ring-offset-2 focus:ring-offset-black"
+      >
+        ✦ View All Projects ✦
+      </button>
+        </div>
+
       </div>
 
       <AnimatePresence>
