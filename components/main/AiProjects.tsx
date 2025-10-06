@@ -11,8 +11,8 @@ import { motion, AnimatePresence, Variants } from 'framer-motion';
 
 
 interface AiProject {
-  id: number;
-  category: "LLM" | "Computer Vision" | "NLP";
+  id: number; 
+  category: "LLM" | "Computer Vision" | "NLP" | "Agentic AI" | "Reinforcement Learning" | "Generative AI" | "Other";
   title: string;
   description: string;
   longDescriptions: string[];
@@ -26,8 +26,31 @@ interface AiProject {
 
 
 const aiProjects: AiProject[] = [
+  {
+  id: 1,
+  category: "Agentic AI",
+  title: "Smart Restaurant Assistant Chatbot",
+  description: "An AI-powered chatbot to assist restaurant customers with orders, inquiries, and reservations.",
+  longDescriptions: [
+    "This smart assistant enhances the dining experience by providing instant responses to customer queries about the menu.",
+    "Leveraging agentic AI, the chatbot can handle complex tasks like taking multi-item orders and making reservations.",
+    "It helps restaurants improve operational efficiency and customer satisfaction by automating routine interactions."
+  ],
+  keyFeatures: [
+    "Conversational Ordering System",
+    "Instant Menu Information and Queries",
+    "Agentic AI for Complex Task Handling",
+    "Seamless Integration for Restaurant Operations"
+  ],
+  tech: ["LangChain", "Gemini LLM", "Node.js", "Express"],
+   images: ["/project/ai.png"],
+    video: "/project/ai.mp4",
+  sourceCodeLink: "https://github.com/vikasgautam2003/Smart-Restaurant-AI-Assistant",
+  liveDemoLink: "https://smart-restaurant-ai-assistant.onrender.com"
+},
 {
-    id: 1,
+  
+    id: 2,
     category: "LLM",
     title: "Ollama PDF Q&A",
     description: "An AI app for asking questions directly from PDF documents.",
@@ -48,7 +71,7 @@ const aiProjects: AiProject[] = [
     liveDemoLink: null,
   },
   {
-    id: 2,
+    id: 3,
     category: "LLM",
     title: "NEXORA – Your News Reporter",
     description: "An AI app that fetches and summarizes the latest news for any topic.",
@@ -70,7 +93,7 @@ const aiProjects: AiProject[] = [
     liveDemoLink: "https://nexora-your-news-reporter.onrender.com",
   },
   {
-    id: 3,
+    id: 4,
     category: "LLM",
     title: "Xplain – Your Topic Explainer",
     description: "An AI app that explains topics in a clear and structured manner.",
@@ -93,28 +116,7 @@ const aiProjects: AiProject[] = [
   }, 
 
   
-{
-    id: 4,
-    category: "LLM",
-    title: "Cold Email Generator",
-    description: "An AI-powered app for generating personalized cold emails.",
-    longDescriptions: [
-        "This Streamlit app allows users to create effective and professional cold emails tailored to recipients using AI.",
-        "Users can input recipient details, context, and preferences, and the system generates ready-to-send email drafts. It leverages LLMs for high-quality, context-aware email generation."
-    ],
-    keyFeatures: [
-        "AI-powered personalized cold email generation",
-        "Interactive Streamlit interface",
-        "Customizable email templates",
-        "Hosted on Hugging Face Spaces"
-    ],
-    tech: ["Python", "Streamlit", "LangChain", "OpenAI API", "Hugging Face Spaces"],
-    images: ["/project/cold.png"],
-    video: "/project/cold.mp4",
-    sourceCodeLink: "https://huggingface.co/spaces/vikasgautam2003/cold_email_generator/tree/main",
-    liveDemoLink: null,
-    
-}
+
 
 
 ];
@@ -188,6 +190,12 @@ export default function AiProjects() {
           ))}
         </motion.div>
       </div>
+    <div className="mt-20 text-center">
+      <button   onClick={() => { window.location.href = '/ai-projects'; }} className=" cursor-pointer px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500 text-white font-bold shadow-lg hover:scale-105 transition-transform duration-300">
+        More AI projects
+      </button>
+    </div>
+
 
       <AnimatePresence>
         {selectedProject && (
