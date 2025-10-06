@@ -45,7 +45,7 @@ const aiProjects: AiProject[] = [
   tech: ["LangChain", "Gemini LLM", "Node.js", "Express"],
    images: ["/project/ai.png", "/project/ai2.png", "/project/ai.png"],
     video: "/project/ai.mp4",
-  sourceCodeLink: "https://github.com/vikasgautam2003/Smart-Restaurant-AI-Assistant",
+  sourceCodeLink: "https://huggingface.co/spaces/vikasgautam2003/smart_restaurant_ai_assistant/tree/main/smart-restaurent-aisitant",
   liveDemoLink: "https://smart-restaurant-ai-assistant.onrender.com"
 },
 {
