@@ -504,24 +504,24 @@ const projects: Project[] = [
   },
 
    {
-    id: 3,
-    title: "Hostel Committee Website",
-    description: "A full-stack platform for managing hostel events, student participation, and discussions.",
-    longDescriptions: [
-        "This website allows admins to create and manage hostel events, while students can register, participate, and engage in discussions.",
-        "It features secure JWT authentication, media uploads via Cloudinary, responsive design, and a dynamic interface built with React for a smooth user experience."
-    ],
-    images: ["/project/hostel2.png", "/project/hostel1.png", "/project/hostel.png"],
-    video: "/project/hostel.mp4",
-    link: "https://hostel-committee-full-stack-website-vsa3.onrender.com/",
-    sourceCode: "https://github.com/vikasgautam2003/hostel-committee-full-stack-website",
-    tech: ["Node.js", "Express.js", "MongoDB", "React", "Cloudinary", "JWT"],
-    keyFeatures: [
-        "Event creation and management",
-        "Student registration for events",
-        "Discussion forum for hostel residents",
-        "Secure media uploads with Cloudinary"
-    ]
+  id: 5,
+  title: "Syntaxly.ai",
+  description: "AI-Powered Code Reviewer for Developers.",
+  longDescriptions: [
+    "Syntaxly.ai is an advanced AI-driven platform that reviews, analyzes, and improves your code instantly — providing intelligent suggestions and bug insights in real-time.",
+    "Built with React, Node.js, and the Gemini API, Syntaxly.ai features a sleek neon interface, real-time linting feedback, and seamless GitHub integration for professional-grade code analysis."
+  ],
+  images: ["/project/code1.png", "/project/code.png", "/project/code2.png"],
+  video: "/project/code.mp4",
+  link: "https://ai-code-reviewer-project-gamma.vercel.app/",
+  sourceCode: "https://github.com/vikasgautam2003/Ai-Code-Reviewer-Project",
+  tech: ["React", "Node.js", "Gemini AI", "Tailwind CSS", "Express.js"],
+  keyFeatures: [
+    "AI-driven code review and optimization",
+    "Real-time syntax and bug detection",
+    "Modern neon-themed UI for developers",
+    
+  ]
 },
 
    {

@@ -540,6 +540,27 @@ const projects: Project[] = [
     ]
   },
   {
+  id: 5,
+  title: "Syntaxly.ai",
+  description: "AI-Powered Code Reviewer for Developers.",
+  longDescriptions: [
+    "Syntaxly.ai is an advanced AI-driven platform that reviews, analyzes, and improves your code instantly — providing intelligent suggestions and bug insights in real-time.",
+    "Built with React, Node.js, and the Gemini API, Syntaxly.ai features a sleek neon interface, real-time linting feedback, and seamless GitHub integration for professional-grade code analysis."
+  ],
+  images: ["/project/code1.png", "/project/code.png", "/project/code2.png"],
+  video: "/project/code.mp4",
+  link: "https://ai-code-reviewer-project-gamma.vercel.app/",
+  sourceCode: "https://github.com/vikasgautam2003/Ai-Code-Reviewer-Project",
+  tech: ["React", "Node.js", "Gemini AI", "Tailwind CSS", "Express.js"],
+  keyFeatures: [
+    "AI-driven code review and optimization",
+    "Real-time syntax and bug detection",
+    "Modern neon-themed UI for developers",
+   
+  ]
+}
+,
+  {
     id: 4,
     title: "Hostel Committee Website",
     description: "A full-stack platform for managing hostel events, student participation, and discussions.",
