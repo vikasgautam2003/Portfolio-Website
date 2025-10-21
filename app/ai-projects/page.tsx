@@ -176,7 +176,7 @@ export default function AiProjects() {
 
       <div className="max-w-7xl mx-auto px-4">
         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="text-5xl md:text-7xl font-bold text-center mb-20 tracking-tighter">
-          AI Creations
+          Mini AI Creations
           
         </motion.h2>
 
