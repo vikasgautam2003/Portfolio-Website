@@ -638,7 +638,7 @@ const projects: Project[] = [
     "Vercel"
   ],
   "keyFeatures": [
-    "**Text-to-Image generation** powered by Google Imagen",
+    "**Text-to-Image generation** powered by Pollination.ai",
     "Instant **AI background removal** feature",
     "Ability to generate **transparent PNGs** directly",
     "Clean, minimalist UI for asset management",
