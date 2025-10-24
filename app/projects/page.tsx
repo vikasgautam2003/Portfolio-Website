@@ -623,7 +623,7 @@ const projects: Project[] = [
   ],
   "images": [
     "/project/image3.png",
-    "/project/image1.png",
+    "/project/image.png",
     "/project/image2.png"
   ],
   "video": "/project/image.mp4",
@@ -632,7 +632,7 @@ const projects: Project[] = [
   "tech": [
     "Next.js",
     "TypeScript",
-    "Google Imagen 2",
+    "Pollination.ai",
     "Tailwind CSS",
     "Shadcn UI",
     "Vercel"
