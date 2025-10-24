@@ -524,26 +524,38 @@ const projects: Project[] = [
   ]
 },
 
-   {
-    id: 4,
-    title: "CogniCare AI",
-    description: "Your Personal Mental Therapist.",
-    longDescriptions: [
-      "CogniCare AI offers personalized mental health support using advanced AI chat technology for interactive and empathetic guidance.",
-      "The platform is built with Next.js, Gemini API, and TypeScript, providing secure sessions and a modern, responsive UI with Tailwind CSS."
-    ],
-    images: ["/project/cogni1.png", "/project/cogni.png", "/project/cogni2.png"],
-    video: "/project/cogniVideo.mp4",
-    link: "https://cogni-care-your-supportive-chatbot.vercel.app/",
-    sourceCode: "https://github.com/vikasgautam2003/CogniCare---Your-Supportive-Chatbot",
-    tech: ["Next.js", "Gemini AI", "Tailwind CSS", "TypeScript"],
-    keyFeatures: [
-      "AI-based mental health support",
-      "Interactive chat interface",
-      "Customizable user sessions",
-      "Secure authentication"
-    ]
-  },
+{
+  "id": 4,
+  "title": "CogniCare AI",
+  "description": "A RAG-powered, empathetic AI chatbot for mental health support.",
+  "longDescriptions": [
+    "CogniCare AI provides safe, empathetic mental health support. It uses a **Retrieval-Augmented Generation (RAG)** pipeline to ensure all answers are grounded in a curated knowledge base of authoritative sources (like NIMH, WHO).",
+    "Built with Next.js, LangChain, and Google Gemini, the AI retrieves factual context from a **Pinecone** vector database. This prevents AI hallucinations and provides users with reliable, evidence-based information in a supportive, interactive chat."
+  ],
+  "images": [
+    "/project/cogni1.png",
+    "/project/cogni.png",
+    "/project/cogni2.png"
+  ],
+  "video": "/project/cogniVideo.mp4",
+  "link": "https://cogni-care-your-supportive-chatbot.vercel.app/",
+  "sourceCode": "https://github.com/vikasgautam2003/CogniCare---Your-Supportive-Chatbot",
+  "tech": [
+    "Next.js",
+    "Google Gemini",
+    "LangChain",
+    "Pinecone",
+    "Tailwind CSS",
+    "TypeScript"
+  ],
+  "keyFeatures": [
+    "**RAG-powered responses** for safe, factual answers",
+    "Grounded in an **authoritative mental health knowledge base**",
+    "**Critical safety system** for crisis language detection",
+    "Empathetic, context-aware AI chat interface",
+    "Prevents AI hallucinations on sensitive topics"
+  ]
+}
 ];
 
 // --- ANIMATION VARIANTS ---

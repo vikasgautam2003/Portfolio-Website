@@ -581,26 +581,70 @@ const projects: Project[] = [
     ]
 }
 ,
-  {
-    id: 5,
-    title: "CogniCare AI",
-    description: "Your Personal Mental Therapist.",
-    longDescriptions: [
-      "CogniCare AI offers personalized mental health support using advanced AI chat technology for interactive and empathetic guidance.",
-      "The platform is built with Next.js, Gemini API, and TypeScript, providing secure sessions and a modern, responsive UI with Tailwind CSS."
-    ],
-    images: ["/project/cogni1.png", "/project/cogni.png", "/project/cogni2.png"],
-    video: "/project/cogniVideo.mp4",
-    link: "https://cogni-care-your-supportive-chatbot.vercel.app/",
-    sourceCode: "https://github.com/vikasgautam2003/CogniCare---Your-Supportive-Chatbot",
-    tech: ["Next.js", "Gemini AI", "Tailwind CSS", "TypeScript"],
-    keyFeatures: [
-      "AI-based mental health support",
-      "Interactive chat interface",
-      "Customizable user sessions",
-      "Secure authentication"
-    ]
-  },
+ {
+  "id": 5,
+  "title": "CogniCare AI",
+  "description": "A RAG-powered, empathetic AI chatbot for mental health support.",
+  "longDescriptions": [
+    "CogniCare AI provides safe, empathetic mental health support. It uses a **Retrieval-Augmented Generation (RAG)** pipeline to ensure all answers are grounded in a curated knowledge base of authoritative sources (like NIMH, WHO).",
+    "Built with Next.js, LangChain, and Google Gemini, the AI retrieves factual context from a **Pinecone** vector database. This prevents AI hallucinations and provides users with reliable, evidence-based information in a supportive, interactive chat."
+  ],
+  "images": [
+    "/project/cogni1.png",
+    "/project/cogni.png",
+    "/project/cogni2.png"
+  ],
+  "video": "/project/cogniVideo.mp4",
+  "link": "https://cogni-care-your-supportive-chatbot.vercel.app/",
+  "sourceCode": "https://github.com/vikasgautam2003/CogniCare---Your-Supportive-Chatbot",
+  "tech": [
+    "Next.js",
+    "Google Gemini",
+    "LangChain",
+    "Pinecone",
+    "Tailwind CSS",
+    "TypeScript"
+  ],
+  "keyFeatures": [
+    "**RAG-powered responses** for safe, factual answers",
+    "Grounded in an **authoritative mental health knowledge base**",
+    "**Critical safety system** for crisis language detection",
+    "Empathetic, context-aware AI chat interface",
+    "Prevents AI hallucinations on sensitive topics"
+  ]
+},
+{
+  "id": 5,
+  "title": "OnePngAi",
+  "description": "An AI-powered image generator and editor for creating high-quality, transparent PNG assets.",
+  "longDescriptions": [
+    "OnePngAi simplifies creative workflows by using **Google's Imagen 2** model to generate high-resolution images from text prompts. Users can request assets with transparent backgrounds directly.",
+    "The application also features a precise **AI background removal** tool. Built with Next.js, TypeScript, and Tailwind CSS, it provides a fast, responsive interface for designers and developers to create production-ready assets instantly."
+  ],
+  "images": [
+    "/project/image3.png",
+    "/project/image1.png",
+    "/project/image2.png"
+  ],
+  "video": "/project/image.mp4",
+  "link": "https://onepng-ai.vercel.app/",
+  "sourceCode": "https://github.com/vikasgautam2003/OnePngAi",
+  "tech": [
+    "Next.js",
+    "TypeScript",
+    "Google Imagen 2",
+    "Tailwind CSS",
+    "Shadcn UI",
+    "Vercel"
+  ],
+  "keyFeatures": [
+    "**Text-to-Image generation** powered by Google Imagen",
+    "Instant **AI background removal** feature",
+    "Ability to generate **transparent PNGs** directly",
+    "Clean, minimalist UI for asset management",
+    "Optimized for fast performance with Next.js"
+  ]
+},
   {
     id: 6,
     title: "Multithreaded Java Web Server",
