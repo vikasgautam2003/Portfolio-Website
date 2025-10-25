@@ -122,71 +122,8 @@ const projects: Project[] = [
     "Distinct 'Search' vs. 'Research' modes with different data sources (Google vs. Google Scholar)"
   ]
 },
-
-  {
-    id: 3,
-    title: "Bonzo Games",
-    description: "A happy place where you can play classic games for some fun.",
-    longDescriptions: [
-      "Bonzo Games allows users to connect and play real-time multiplayer games with smooth animations and responsive design across devices.",
-      "The platform is built with Node.js and Socket.IO, providing secure authentication, persistent storage, and an engaging user interface using Tailwind CSS."
-    ],
-    images: ["/project/bonzo.png", "/project/bonzo1.png", "/project/bonzo2.png"],
-    video: "/project/bonzoVideo.mp4",
-    link: "https://bonzo-gaming-website.onrender.com",
-    sourceCode: "https://github.com/vikasgautam2003/Bonzo-Gaming-Website",
-    tech: ["Socket.IO", "Node.js", "MongoDB", "JWT", "Tailwind CSS", "JavaScript", "EJS"],
-    keyFeatures: [
-      "Real-time multiplayer gaming",
-      "User authentication with JWT",
-      "Responsive design with Tailwind CSS",
-      "Interactive UI with animations"
-    ]
-  },
-  {
-  id: 5,
-  title: "Syntaxly.ai",
-  description: "AI-Powered Code Reviewer for Developers.",
-  longDescriptions: [
-    "Syntaxly.ai is an advanced AI-driven platform that reviews, analyzes, and improves your code instantly — providing intelligent suggestions and bug insights in real-time.",
-    "Built with React, Node.js, and the Gemini API, Syntaxly.ai features a sleek neon interface, real-time linting feedback, and seamless GitHub integration for professional-grade code analysis."
-  ],
-  images: ["/project/code1.png", "/project/code.png", "/project/code2.png"],
-  video: "/project/code.mp4",
-  link: "https://ai-code-reviewer-project-gamma.vercel.app/",
-  sourceCode: "https://github.com/vikasgautam2003/Ai-Code-Reviewer-Project",
-  tech: ["React", "Node.js", "Gemini AI", "Tailwind CSS", "Express.js"],
-  keyFeatures: [
-    "AI-driven code review and optimization",
-    "Real-time syntax and bug detection",
-    "Modern neon-themed UI for developers",
-   
-  ]
-}
-,
-  {
-    id: 4,
-    title: "Hostel Committee Website",
-    description: "A full-stack platform for managing hostel events, student participation, and discussions.",
-    longDescriptions: [
-        "This website allows admins to create and manage hostel events, while students can register, participate, and engage in discussions.",
-        "It features secure JWT authentication, media uploads via Cloudinary, responsive design, and a dynamic interface built with React for a smooth user experience."
-    ],
-    images: ["/project/hostel2.png", "/project/hostel1.png", "/project/hostel.png"],
-    video: "/project/hostel.mp4",
-    link: "https://hostel-committee-full-stack-website-vsa3.onrender.com/",
-    sourceCode: "https://github.com/vikasgautam2003/hostel-committee-full-stack-website",
-    tech: ["Node.js", "Express.js", "MongoDB", "React", "Cloudinary", "JWT"],
-    keyFeatures: [
-        "Event creation and management",
-        "Student registration for events",
-        "Discussion forum for hostel residents",
-        "Secure media uploads with Cloudinary"
-    ]
-}
-,
- {
-  "id": 5,
+{
+  "id": 3,
   "title": "CogniCare AI",
   "description": "A RAG-powered, empathetic AI chatbot for mental health support.",
   "longDescriptions": [
@@ -218,9 +155,9 @@ const projects: Project[] = [
   ]
 },
 {
-  "id": 5,
+  "id": 4,
   "title": "OnePngAi",
-  "description": "An AI-powered image generatot for creating high-quality, transparent PNG assets.",
+  "description": "An AI-powered image generator for creating high-quality, transparent PNG assets.",
   "longDescriptions": [
     "OnePngAi simplifies creative workflows by using **Pollination.ai** model to generate high-resolution images from text prompts. Users can request assets with transparent backgrounds directly.",
    
@@ -247,8 +184,74 @@ const projects: Project[] = [
     "Optimized for fast performance with Next.js"
   ]
 },
+
+ 
+  {
+  id: 5,
+  title: "Syntaxly.ai",
+  description: "AI-Powered Code Reviewer for Developers.",
+  longDescriptions: [
+    "Syntaxly.ai is an advanced AI-driven platform that reviews, analyzes, and improves your code instantly — providing intelligent suggestions and bug insights in real-time.",
+    "Built with React, Node.js, and the Gemini API, Syntaxly.ai features a sleek neon interface, real-time linting feedback, and seamless GitHub integration for professional-grade code analysis."
+  ],
+  images: ["/project/code1.png", "/project/code.png", "/project/code2.png"],
+  video: "/project/code.mp4",
+  link: "https://ai-code-reviewer-project-gamma.vercel.app/",
+  sourceCode: "https://github.com/vikasgautam2003/Ai-Code-Reviewer-Project",
+  tech: ["React", "Node.js", "Gemini AI", "Tailwind CSS", "Express.js"],
+  keyFeatures: [
+    "AI-driven code review and optimization",
+    "Real-time syntax and bug detection",
+    "Modern neon-themed UI for developers",
+   
+  ]
+},
+
+
   {
     id: 6,
+    title: "Hostel Committee Website",
+    description: "A full-stack platform for managing hostel events, student participation, and discussions.",
+    longDescriptions: [
+        "This website allows admins to create and manage hostel events, while students can register, participate, and engage in discussions.",
+        "It features secure JWT authentication, media uploads via Cloudinary, responsive design, and a dynamic interface built with React for a smooth user experience."
+    ],
+    images: ["/project/hostel2.png", "/project/hostel1.png", "/project/hostel.png"],
+    video: "/project/hostel.mp4",
+    link: "https://hostel-committee-full-stack-website-vsa3.onrender.com/",
+    sourceCode: "https://github.com/vikasgautam2003/hostel-committee-full-stack-website",
+    tech: ["Node.js", "Express.js", "MongoDB", "React", "Cloudinary", "JWT"],
+    keyFeatures: [
+        "Event creation and management",
+        "Student registration for events",
+        "Discussion forum for hostel residents",
+        "Secure media uploads with Cloudinary"
+    ]
+}
+,
+ {
+    id: 7,
+    title: "Bonzo Games",
+    description: "A happy place where you can play classic games for some fun.",
+    longDescriptions: [
+      "Bonzo Games allows users to connect and play real-time multiplayer games with smooth animations and responsive design across devices.",
+      "The platform is built with Node.js and Socket.IO, providing secure authentication, persistent storage, and an engaging user interface using Tailwind CSS."
+    ],
+    images: ["/project/bonzo.png", "/project/bonzo1.png", "/project/bonzo2.png"],
+    video: "/project/bonzoVideo.mp4",
+    link: "https://bonzo-gaming-website.onrender.com",
+    sourceCode: "https://github.com/vikasgautam2003/Bonzo-Gaming-Website",
+    tech: ["Socket.IO", "Node.js", "MongoDB", "JWT", "Tailwind CSS", "JavaScript", "EJS"],
+    keyFeatures: [
+      "Real-time multiplayer gaming",
+      "User authentication with JWT",
+      "Responsive design with Tailwind CSS",
+      "Interactive UI with animations"
+    ]
+  },
+ 
+  {
+    id: 8,
     title: "Multithreaded Java Web Server",
     description: "A high-performance TCP server in Java supporting multiple concurrent clients using a thread pool.",
     longDescriptions: [
