@@ -155,6 +155,27 @@ const projects: Project[] = [
     "Prevents AI hallucinations on sensitive topics"
   ]
 },
+  {
+    id: 7,
+    title: "Hostel Committee Website",
+    description: "A full-stack platform for managing hostel events, student participation, and discussions.",
+    longDescriptions: [
+        "This website allows admins to create and manage hostel events, while students can register, participate, and engage in discussions.",
+        "It features secure JWT authentication, media uploads via Cloudinary, responsive design, and a dynamic interface built with React for a smooth user experience."
+    ],
+    images: ["/project/hostel2.png", "/project/hostel1.png", "/project/hostel.png"],
+    video: "/project/hostel.mp4",
+    link: "https://hostel-committee-full-stack-website-vsa3.onrender.com/",
+    sourceCode: "https://github.com/vikasgautam2003/hostel-committee-full-stack-website",
+    tech: ["Node.js", "Express.js", "MongoDB", "React", "Cloudinary", "JWT"],
+    keyFeatures: [
+        "Event creation and management",
+        "Student registration for events",
+        "Discussion forum for hostel residents",
+        "Secure media uploads with Cloudinary"
+    ]
+}
+,
 {
   "id": 4,
   "title": "OnePngAi",
@@ -241,27 +262,7 @@ const projects: Project[] = [
 },
 
 
-  {
-    id: 7,
-    title: "Hostel Committee Website",
-    description: "A full-stack platform for managing hostel events, student participation, and discussions.",
-    longDescriptions: [
-        "This website allows admins to create and manage hostel events, while students can register, participate, and engage in discussions.",
-        "It features secure JWT authentication, media uploads via Cloudinary, responsive design, and a dynamic interface built with React for a smooth user experience."
-    ],
-    images: ["/project/hostel2.png", "/project/hostel1.png", "/project/hostel.png"],
-    video: "/project/hostel.mp4",
-    link: "https://hostel-committee-full-stack-website-vsa3.onrender.com/",
-    sourceCode: "https://github.com/vikasgautam2003/hostel-committee-full-stack-website",
-    tech: ["Node.js", "Express.js", "MongoDB", "React", "Cloudinary", "JWT"],
-    keyFeatures: [
-        "Event creation and management",
-        "Student registration for events",
-        "Discussion forum for hostel residents",
-        "Secure media uploads with Cloudinary"
-    ]
-}
-,
+
  {
     id: 8,
     title: "Bonzo Games",
