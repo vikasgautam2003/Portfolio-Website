@@ -528,7 +528,7 @@ const projects: Project[] = [
 
 {
   "id": 4,
-  "title": "ogniCare AI: RAG Mental Health Chatbot",
+  "title": "CogniCare AI: RAG Mental Health Chatbot",
   "description": "A RAG-powered, empathetic AI chatbot for mental health support.",
   "longDescriptions": [
     "CogniCare AI provides safe, empathetic mental health support. It uses a **Retrieval-Augmented Generation (RAG)** pipeline to ensure all answers are grounded in a curated knowledge base of authoritative sources (like NIMH, WHO).",
