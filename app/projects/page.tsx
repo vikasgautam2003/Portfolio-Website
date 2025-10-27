@@ -58,6 +58,7 @@ interface Project {
   video?: string;
   link: string;
   sourceCode: string;
+  message?: string;
   tech: string[];
   keyFeatures: string[];
 }
@@ -124,7 +125,7 @@ const projects: Project[] = [
 },
 {
   "id": 3,
-  "title": "CogniCare AI",
+  "title": "CogniCare AI: RAG Mental Health Chatbot",
   "description": "A RAG-powered, empathetic AI chatbot for mental health support.",
   "longDescriptions": [
     "CogniCare AI provides safe, empathetic mental health support. It uses a **Retrieval-Augmented Generation (RAG)** pipeline to ensure all answers are grounded in a curated knowledge base of authoritative sources (like NIMH, WHO).",
@@ -184,10 +185,42 @@ const projects: Project[] = [
     "Optimized for fast performance with Next.js"
   ]
 },
+{
+  "id": 5,
+  "title": "VidQuery: YouTube RAG Chatbot",
+  "description": "An AI-powered RAG chatbot that allows users to ask questions about YouTube videos and receive answers based on the video's transcript.",
+  "longDescriptions": [
+    "VidQuery uses Retrieval-Augmented Generation (RAG) to provide contextually accurate answers. It fetches the video transcript, chunks it, creates vector embeddings (using Google Gemini models via LangChain), and stores them in a FAISS vector database.",
+    "When a user asks a question, the system retrieves the most relevant transcript chunks and feeds them, along with the question, to a generative AI model (Gemini) to produce an answer grounded in the video's content. Features include handling missing English transcripts via translation."
+  ],
+  "images": ["/project/vidq2.png", "/project/vidq1.png", "/project/vidq.png"],
+  "video": "/project/vidq.mp4", 
+  "link":  "",
+  "sourceCode": "https://github.com/vikasgautam2003/youtuber-video-RAG-Project", // Replace with your GitHub repository link
+  "message" : "Due to Youtube blocking API requests from deployed applications, the live demo is currently unavailable. Please check the source code to run it locally.",
+  "tech": [
+    "Next.js",
+    "TypeScript",
+    "Python",
+    "FastAPI",
+    "LangChain",
+    "Google Gemini",
+    "FAISS",
+    "Tailwind CSS",
+    "youtube-transcript-api"
+  ],
+  "keyFeatures": [
+    "Chat with YouTube videos via URL",
+    "AI-powered Q&A based on transcripts",
+    "Retrieval-Augmented Generation (RAG)",
+    "Automatic transcript fetching",
+    "Interactive chat interface with video preview",
+  ]
+},
 
  
   {
-  id: 5,
+  id: 6,
   title: "Syntaxly.ai",
   description: "AI-Powered Code Reviewer for Developers.",
   longDescriptions: [
@@ -209,7 +242,7 @@ const projects: Project[] = [
 
 
   {
-    id: 6,
+    id: 7,
     title: "Hostel Committee Website",
     description: "A full-stack platform for managing hostel events, student participation, and discussions.",
     longDescriptions: [
@@ -230,7 +263,7 @@ const projects: Project[] = [
 }
 ,
  {
-    id: 7,
+    id: 8,
     title: "Bonzo Games",
     description: "A happy place where you can play classic games for some fun.",
     longDescriptions: [
@@ -251,7 +284,7 @@ const projects: Project[] = [
   },
  
   {
-    id: 8,
+    id: 9,
     title: "Multithreaded Java Web Server",
     description: "A high-performance TCP server in Java supporting multiple concurrent clients using a thread pool.",
     longDescriptions: [
@@ -346,7 +379,7 @@ export default function ProjectSection() {
         </motion.div>
       </div>
 
-      {/* --- UNTOUCHED MODAL CODE --- */}
+ 
       <AnimatePresence>
         {selectedProject && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black/80 backdrop-blur-lg z-50 flex items-center justify-center p-4" onClick={() => setSelectedProject(null)}>
@@ -365,21 +398,29 @@ export default function ProjectSection() {
                 <p className="text-base sm:text-lg text-gray-300 mb-4 font-bold">{selectedProject.description}</p>
 
 
-                {[1, 2, 4].includes(selectedProject.id) && (
-                  <div className="mb-6 p-4 rounded-lg bg-yellow-900/20 border-l-4 border-yellow-500">
-                    <p className="text-yellow-400 text-sm sm:text-base font-medium leading-relaxed">
-                      Currently in development. Users may experience some issues. Nonetheless, the application is fully operational, so feel free to explore and provide feedback.
-                    </p>
-                  </div>
-                )}
+               {selectedProject?.message && (
+              <div className="flex items-center gap-2 p-3 rounded-lg bg-yellow-100 border border-yellow-400 text-yellow-800 mt-10 mb-10">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5 text-yellow-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+                </svg>
+                <p className="font-medium">{selectedProject.message}</p>
+              </div>
+            )}
 
 
-                {/* TWO LONG DESCRIPTIONS */}
+
+            
                 {selectedProject.longDescriptions.map((ld, idx) => (
                   <p key={idx} className="text-gray-300 text-sm sm:text-base mb-4">{ld}</p>
                 ))}
 
-                {/* KEY FEATURES */}
+
                 <div className="mb-6 pt-10">
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">Key Features</h3>
                   <ul className="list-disc list-inside space-y-2 text-gray-300">
@@ -387,7 +428,7 @@ export default function ProjectSection() {
                   </ul>
                 </div>
 
-                {/* SOURCE CODE BUTTON */}
+        
                       <div className="flex justify-center mb-12 pt-7">
                         <a 
                           href={selectedProject.sourceCode} 
@@ -395,7 +436,7 @@ export default function ProjectSection() {
                           rel="noopener noreferrer" 
                           className="flex items-center gap-2 bg-green-600 hover:bg-green-700 px-6 py-3 rounded-full text-white text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
                         >
-                          {/* Code Icon */}
+                  
                           <svg 
                             xmlns="http://www.w3.org/2000/svg" 
                             fill="none" 

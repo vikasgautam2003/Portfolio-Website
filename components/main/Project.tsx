@@ -433,6 +433,7 @@ interface Project {
   video?: string;
   link?: string;
   sourceCode?: string;
+  message?: string;
   tech: string[];
   keyFeatures: string[];
 }
@@ -504,29 +505,30 @@ const projects: Project[] = [
   },
 
    {
-  id: 5,
-  title: "Syntaxly.ai",
-  description: "AI-Powered Code Reviewer for Developers.",
-  longDescriptions: [
-    "Syntaxly.ai is an advanced AI-driven platform that reviews, analyzes, and improves your code instantly — providing intelligent suggestions and bug insights in real-time.",
-    "Built with React, Node.js, and the Gemini API, Syntaxly.ai features a sleek neon interface, real-time linting feedback, and seamless GitHub integration for professional-grade code analysis."
-  ],
-  images: ["/project/code1.png", "/project/code.png", "/project/code2.png"],
-  video: "/project/code.mp4",
-  link: "https://ai-code-reviewer-project-gamma.vercel.app/",
-  sourceCode: "https://github.com/vikasgautam2003/Ai-Code-Reviewer-Project",
-  tech: ["React", "Node.js", "Gemini AI", "Tailwind CSS", "Express.js"],
-  keyFeatures: [
-    "AI-driven code review and optimization",
-    "Real-time syntax and bug detection",
-    "Modern neon-themed UI for developers",
-    
-  ]
+    id: 3,
+    title: "Hostel Committee Website",
+    description: "A full-stack platform for managing hostel events, student participation, and discussions.",
+    longDescriptions: [
+        "This website allows admins to create and manage hostel events, while students can register, participate, and engage in discussions.",
+        "It features secure JWT authentication, media uploads via Cloudinary, responsive design, and a dynamic interface built with React for a smooth user experience."
+    ],
+    images: ["/project/hostel2.png", "/project/hostel1.png", "/project/hostel.png"],
+    video: "/project/hostel.mp4",
+    link: "https://hostel-committee-full-stack-website-vsa3.onrender.com/",
+    sourceCode: "https://github.com/vikasgautam2003/hostel-committee-full-stack-website",
+    tech: ["Node.js", "Express.js", "MongoDB", "React", "Cloudinary", "JWT"],
+    keyFeatures: [
+        "Event creation and management",
+        "Student registration for events",
+        "Discussion forum for hostel residents",
+        "Secure media uploads with Cloudinary"
+    ]
 },
+   
 
 {
   "id": 4,
-  "title": "CogniCare AI",
+  "title": "ogniCare AI: RAG Mental Health Chatbot",
   "description": "A RAG-powered, empathetic AI chatbot for mental health support.",
   "longDescriptions": [
     "CogniCare AI provides safe, empathetic mental health support. It uses a **Retrieval-Augmented Generation (RAG)** pipeline to ensure all answers are grounded in a curated knowledge base of authoritative sources (like NIMH, WHO).",
@@ -697,7 +699,7 @@ export default function ProjectSection() {
   );
 }
 
-// --- MODAL COMPONENT ---
+
 interface ProjectModalProps {
   selectedProject: Project | null;
   setSelectedProject: (project: Project | null) => void;
@@ -752,14 +754,22 @@ function ProjectModal({ selectedProject, setSelectedProject }: ProjectModalProps
                 {selectedProject.description}
               </p>
 
-              {[1, 2, 3].includes(selectedProject.id) && (
-                <div className="mb-6 p-4 rounded-lg bg-yellow-900/20 border-l-4 border-yellow-500">
-                  <p className="text-yellow-400 text-sm sm:text-base font-medium leading-relaxed">
-                    Currently in development. Users may experience some issues. Nonetheless, the
-                    application is fully operational, so feel free to explore and provide feedback.
-                  </p>
+
+              {selectedProject?.message && (
+                <div className="flex items-center gap-2 p-3 rounded-lg bg-yellow-100 border border-yellow-400 text-yellow-800">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 text-yellow-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+                  </svg>
+                  <p className="font-medium">{selectedProject.message}</p>
                 </div>
               )}
+
 
               {selectedProject.longDescriptions.map((ld, idx) => (
                 <p key={`ld-${idx}`} className="text-gray-300 text-sm sm:text-base mb-4">
