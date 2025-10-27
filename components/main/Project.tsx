@@ -476,7 +476,7 @@ const projects: Project[] = [
     id: 2,
     title: "QueryAI",
     description:
-      "An AI-powered answer engine that provides summarized, sourced answers from real-time web results, inspired by Perplexity.",
+      "An AI-powered search engine that provides summarized, sourced answers from real-time web results, inspired by Perplexity.",
     longDescriptions: [
       "QueryAI is a full-stack, AI-native search engine designed to move beyond traditional links. It fetches real-time information from the web using SerpApi, then leverages the Google Gemini LLM to synthesize comprehensive, accurate answers with inline citations.",
       "The platform features a decoupled architecture with a Next.js/React frontend and a custom Express.js backend. It includes a complete user authentication system using JWT, a personalized dashboard with search history, a multi-widget 'Discover' page with live data, and a cutting-edge voice-to-voice conversational chat interface.",
