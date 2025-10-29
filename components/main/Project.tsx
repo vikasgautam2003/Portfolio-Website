@@ -527,36 +527,31 @@ const projects: Project[] = [
    
 
 {
-  "id": 4,
-  "title": "CogniCare AI: RAG Mental Health Chatbot",
-  "description": "A RAG-powered, empathetic AI chatbot for mental health support.",
-  "longDescriptions": [
-    "CogniCare AI provides safe, empathetic mental health support. It uses a **Retrieval-Augmented Generation (RAG)** pipeline to ensure all answers are grounded in a curated knowledge base of authoritative sources (like NIMH, WHO).",
-    "Built with Next.js, LangChain, and Google Gemini, the AI retrieves factual context from a **Pinecone** vector database. This prevents AI hallucinations and provides users with reliable, evidence-based information in a supportive, interactive chat."
-  ],
-  "images": [
-    "/project/cogni1.png",
-    "/project/cogni.png",
-    "/project/cogni2.png"
-  ],
-  "video": "/project/cogniVideo.mp4",
-  "link": "https://cogni-care-your-supportive-chatbot.vercel.app/",
-  "sourceCode": "https://github.com/vikasgautam2003/CogniCare---Your-Supportive-Chatbot",
-  "tech": [
-    "Next.js",
-    "Google Gemini",
-    "LangChain",
-    "Pinecone",
-    "Tailwind CSS",
-    "TypeScript"
-  ],
-  "keyFeatures": [
-    "**RAG-powered responses** for safe, factual answers",
-    "Grounded in an **authoritative mental health knowledge base**",
-    "**Critical safety system** for crisis language detection",
-    "Empathetic, context-aware AI chat interface",
-    "Prevents AI hallucinations on sensitive topics"
-  ]
+    "id": 1,
+    "title": "Minerva.ai : Medical RAG Assistant",
+    "description": "An AI-powered system providing precise, contextual health analysis based only on user-uploaded medical reports using Gemini and Pinecone.",
+    "longDescriptions": [
+        "Minerva.ai solves the core problem of generic AI in health by employing a strict Retrieval-Augmented Generation (RAG) architecture. When a user queries their health status, the system retrieves relevant information only from their indexed reports before calling the Gemini LLM for synthesis, ensuring high accuracy and reducing hallucination.",
+        "The application features a secure, client-side document processing flow (File Upload -> Private Pinecone Indexing) and maintains conversational context using LangChain.js memory for multi-turn medical consultations."
+    ],
+    "images": ["/project/med.png", "/project/med1.png", "/project/med2.png"],
+    "video": "/project/med.mp4",
+    "link": "https://minervaai.vercel.app/",
+    "sourceCode": "https://github.com/vikasgautam2003/minervaAI---RAG-chatbot",
+    "tech": [
+        "Next.js (TS)",
+        "Gemini AI",
+        "Pinecone",
+        "LangChain.js",
+        "Tailwind CSS",
+        "Framer Motion"
+    ],
+    "keyFeatures": [
+        "Contextual RAG for Health (Gemini + Pinecone)",
+        "Zero-Knowledge Architecture (Client-side processing)",
+        "Conversational Memory for Multi-Turn Consultations",
+        "Isolated Data Handling (Pinecone Namespace per report)"
+    ]
 }
 ];
 
@@ -740,7 +735,7 @@ function ProjectModal({ selectedProject, setSelectedProject }: ProjectModalProps
                 fill
                 className="object-cover rounded-t-3xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
               <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10">
                 <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tighter">
                   {selectedProject.title}
