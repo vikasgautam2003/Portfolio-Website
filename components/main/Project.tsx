@@ -464,6 +464,8 @@ const projects: Project[] = [
       "OpenCV",
       "WebRTC",
     ],
+        "message":"This website is best viewed on larger devices like desktops, laptops, or tablets. Mobile devices are not fully supported at the moment.",
+
     keyFeatures: [
       "Real-time AI proctoring (face, voice, and tab-switch detection)",
       "Two-tiered violation system (Fatal Strikes & Suspicion Score)",
@@ -481,6 +483,8 @@ const projects: Project[] = [
       "QueryAI is a full-stack, AI-native search engine designed to move beyond traditional links. It fetches real-time information from the web using SerpApi, then leverages the Google Gemini LLM to synthesize comprehensive, accurate answers with inline citations.",
       "The platform features a decoupled architecture with a Next.js/React frontend and a custom Express.js backend. It includes a complete user authentication system using JWT, a personalized dashboard with search history, a multi-widget 'Discover' page with live data, and a cutting-edge voice-to-voice conversational chat interface.",
     ],
+        "message":"This website is best viewed on larger devices like desktops, laptops, or tablets. Mobile devices are not fully supported at the moment.",
+
     images: ["/project/q.png", "/project/q1.png", "/project/q2.png"],
     video: "/project/q.mp4",
     link: "https://query-ai-five.vercel.app/",

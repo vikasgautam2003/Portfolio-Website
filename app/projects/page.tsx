@@ -79,6 +79,7 @@ const projects: Project[] = [
     "link": "https://sentinalai-jade.vercel.app/",
     "sourceCode": "https://github.com/vikasgautam2003/ai_cheating_in_test_detector",
     "tech": ["Next.js", "Node.js","FastAPI", "Python", "MongoDB", "Socket.IO", "OpenCV", "WebRTC"],
+    "message":"This website is best viewed on larger devices like desktops, laptops, or tablets. Mobile devices are not fully supported at the moment.",
     "keyFeatures": [
       "Real-time AI proctoring (face, voice, and tab-switch detection)",
       "Two-tiered violation system (Fatal Strikes & Suspicion Score)",
@@ -114,6 +115,8 @@ const projects: Project[] = [
     "Google Gemini API",
     "WebRTC"
   ],
+      "message":"This website is best viewed on larger devices like desktops, laptops, or tablets. Mobile devices are not fully supported at the moment.",
+
   "keyFeatures": [
     "AI-powered answers with real-time web search (SerpApi & Gemini)",
     "Full user authentication system with JWT (Express & MongoDB)",
@@ -175,6 +178,7 @@ const projects: Project[] = [
         "Tailwind CSS",
         "Framer Motion"
     ],
+    
     "keyFeatures": [
         "Contextual RAG for Health (Gemini + Pinecone)",
         "Zero-Knowledge Architecture (Client-side processing)",
