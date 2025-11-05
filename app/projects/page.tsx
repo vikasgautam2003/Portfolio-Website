@@ -159,12 +159,12 @@ const projects: Project[] = [
   ]
 },
 {
-    "id": 11,
+    "id": 1,
     "title": "Minerva.ai : Medical RAG Assistant",
-    "description": "An AI-powered system providing precise, contextual health analysis based only on user-uploaded medical reports using Gemini and Pinecone.",
+    "description": "An AI-powered system providing precise, health analysis based only on user-uploaded medical reports using Gemini and Pinecone.",
     "longDescriptions": [
         "Minerva.ai solves the core problem of generic AI in health by employing a strict Retrieval-Augmented Generation (RAG) architecture. When a user queries their health status, the system retrieves relevant information only from their indexed reports before calling the Gemini LLM for synthesis, ensuring high accuracy and reducing hallucination.",
-        "The application features a secure, client-side document processing flow (File Upload -> Private Pinecone Indexing) and maintains conversational context using LangChain.js memory for multi-turn medical consultations."
+        "The application features a secure, client-side document processing flow (File Upload -> Private Pinecone Indexing)."
     ],
     "images": ["/project/med.png", "/project/med1.png", "/project/med2.png"],
     "video": "/project/med.mp4",
@@ -178,9 +178,8 @@ const projects: Project[] = [
         "Tailwind CSS",
         "Framer Motion"
     ],
-    
     "keyFeatures": [
-        "Contextual RAG for Health (Gemini + Pinecone)",
+        "RAG for Health (Gemini + Pinecone)",
         "Zero-Knowledge Architecture (Client-side processing)",
         "Conversational Memory for Multi-Turn Consultations",
         "Isolated Data Handling (Pinecone Namespace per report)"
