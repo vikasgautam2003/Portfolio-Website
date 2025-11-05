@@ -615,12 +615,19 @@ export default function ProjectSection() {
       className="py-20 sm:py-28 px-4 md:px-10 text-white relative z-10 min-h-screen bg-transparent"
     >
       <div className="max-w-7xl mx-auto">
-        <motion.h2
-          variants={itemVariants}
-          className="text-4xl sm:text-5xl md:text-7xl font-bold text-center mb-16 sm:mb-20 tracking-tighter"
-        >
-          My Creations
-        </motion.h2>
+       <motion.h2
+            variants={itemVariants}
+            className="text-4xl sm:text-5xl md:text-7xl font-bold text-center mb-16 sm:mb-20 tracking-tighter"
+          >
+            My Creations
+    <span className="block text-base sm:text-lg md:text-xl mt-6 text-gray-500 tracking-wide leading-relaxed">
+  Click on a project to explore its architecture, purpose, and story in detail.
+</span>
+
+
+
+          </motion.h2>
+
 
         <motion.div
           variants={containerVariants}

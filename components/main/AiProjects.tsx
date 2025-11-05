@@ -12,7 +12,7 @@ import { motion, AnimatePresence, Variants } from 'framer-motion';
 
 interface AiProject {
   id: number; 
-  category: "LLM" | "Computer Vision" | "NLP" | "Agentic AI" | "Reinforcement Learning" | "Generative AI" | "Other";
+  category: "LLM" | "Computer Vision" | "NLP" | "Agentic AI" | "Reinforcement Learning" | "Generative AI" | "RAG" |"Other";
   title: string;
   description: string;
   longDescriptions: string[];
@@ -49,8 +49,38 @@ const aiProjects: AiProject[] = [
   liveDemoLink: "https://smart-restaurant-ai-assistant.onrender.com"
 },
 {
+  "id": 2,
+  "category": "RAG",
+  "title": "Contradiction Auditor (Distributed RAG Engine)",
+  "description": "A high-performance verification engine designed to solve the 'Conflicting Information Problem' by forcing multiple LLMs to structurally extract and attribute contradictory facts from various sources.",
+  "longDescriptions": [
+    "The primary goal is to automate the extraction of all conflicting claims (e.g., different revenue figures, dates, or statistics) related to a single query, providing the human analyst with a complete, auditable evidence trail.",
+    "The system implements a robust, distributed 5-stage RAG pipeline to ensure reliability and bypass single-provider rate limits, guaranteeing data integrity and availability.",
+    "It demonstrates expertise in leveraging advanced models for specialized tasks: a fast model for creative text expansion and a reliable model for strict JSON validation."
+  ],
+  "keyFeatures": [
+    "Distributed LLM Workload (Gemini for Query, Llama 3/Groq for Extraction)",
+    "Auditable Output (Links every extracted fact back to its source document ID)",
+    "Structured Verification (Enforces JSON Schema via Zod for clean, machine-readable data)",
+    "Advanced Retrieval Techniques (Multi-Query Generation & Vector Search principle)",
+    "Human-in-the-Loop Design (Enables analyst judgment over conflicting evidence)"
+  ],
+  "tech": [
+    "Next.js",
+    "TypeScript",
+    "LangChain (Concepts)",
+    "Gemini API",
+    "Groq (Llama 3)",
+    "Zod"
+  ],
+  "images": ["/project/audi.png"],
+  "video": "/project/audi.mp4",
+  "sourceCodeLink": "https://github.com/vikasgautam2003/Contradiction-Audito",
+  "liveDemoLink": null
+},
+{
   
-    id: 2,
+    id: 3,
     category: "LLM",
     title: "Ollama PDF Q&A",
     description: "An AI app for asking questions directly from PDF documents.",
@@ -70,30 +100,9 @@ const aiProjects: AiProject[] = [
     sourceCodeLink: "https://huggingface.co/spaces/vikasgautam2003/ollama_streamlit_pdf_q_and_answer_",
     liveDemoLink: null,
   },
+  
   {
-    id: 3,
-    category: "LLM",
-    title: "NEXORA – Your News Reporter",
-    description: "An AI app that fetches and summarizes the latest news for any topic.",
-    longDescriptions: [
-      "NEXORA allows users to get up-to-date news summaries by querying topics of interest.",
-      "It uses Gemini LLM and SerpAPI to fetch the latest articles, summarize key points, and present them in a reader-friendly format.",
-      "The app is built with Node.js and can be deployed locally or via Docker."
-    ],
-    keyFeatures: [
-      "News Summarization with Gemini LLM",
-      "Fetches real-time articles via SerpAPI",
-      "Reader-friendly summaries",
-      "Containerized for easy deployment"
-    ],
-    tech: ["LangChain", "Gemini LLM", "SerpAPI", "Docker", "Node.js", "Express"],
-    images: ["/project/Nex.png"],
-    video: "/project/Nex.mp4",
-    sourceCodeLink: "https://huggingface.co/spaces/vikasgautam2003/NEXORA__Your_News_Reporter",
-    liveDemoLink: "https://nexora-your-news-reporter.onrender.com",
-  },
-  {
-    id: 4,
+    id: 5,
     category: "LLM",
     title: "Xplain – Your Topic Explainer",
     description: "An AI app that explains topics in a clear and structured manner.",

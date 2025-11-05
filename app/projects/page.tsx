@@ -159,7 +159,7 @@ const projects: Project[] = [
   ]
 },
 {
-    "id": 9,
+    "id": 11,
     "title": "Minerva.ai : Medical RAG Assistant",
     "description": "An AI-powered system providing precise, contextual health analysis based only on user-uploaded medical reports using Gemini and Pinecone.",
     "longDescriptions": [
@@ -337,6 +337,37 @@ const projects: Project[] = [
     ]
   },
 
+  {
+    "id": 10,
+    "title": "Locatrix : Live Location Tracker",
+    "description": "A real-time web application that visualizes and shares users’ live GPS positions using Leaflet, OpenStreetMap, and Socket.IO for instant updates.",
+    "longDescriptions": [
+        "Locatrix enables users to view, track, and share their live location on an interactive map in real time. By leveraging the browser’s Geolocation API and Socket.IO, it continuously synchronizes user coordinates and broadcasts updates seamlessly across connected clients.",
+        "The system integrates OpenStreetMap’s Nominatim API for reverse geocoding, converting raw coordinates into human-readable addresses, and uses Unsplash API to dynamically fetch contextual images of the detected locations. The entire interface is designed with Tailwind CSS and optimized for responsive, cross-device performance."
+    ],
+    "images": ["/project/live1.png", "/project/live2.png", "/project/live.png"],
+    "video": "/project/live.mp4",
+    "link": "https://location-tracker-app-07th.onrender.com/",
+    "sourceCode": "https://github.com/vikasgautam2003/Location_Tracker__app",
+    "tech": [
+        "Node.js",
+        "Express.js",
+        "Socket.IO",
+        "Leaflet.js",
+        "OpenStreetMap (Nominatim)",
+        "Unsplash API",
+        "Tailwind CSS"
+    ],
+    "keyFeatures": [
+        "Real-Time Location Tracking via Socket.IO",
+        "Reverse Geocoding with OpenStreetMap Nominatim API",
+        "Dynamic Location-Based Photos from Unsplash API",
+        "Interactive Leaflet Map with Live Marker Updates",
+        "Responsive Sidebar UI with Coordinates and Address Display",
+        "Lightweight, Fast, and Zero-Database Architecture"
+    ]
+}
+
 
 ];
 
@@ -378,6 +409,10 @@ export default function ProjectSection() {
       <div className="max-w-7xl mx-auto mt-10">
         <motion.h2 variants={itemVariants} className="text-4xl sm:text-5xl md:text-7xl font-bold text-center mb-16 sm:mb-20 tracking-tighter">
           My Creations
+          <span className="block text-base sm:text-lg md:text-xl mt-6 text-gray-500 tracking-wide leading-relaxed">
+  Click on a project to explore its architecture, purpose, and story in detail.
+</span>
+
         </motion.h2>
 
         <motion.div variants={containerVariants} className="grid gap-8 sm:gap-12 grid-cols-1 lg:grid-cols-2">
