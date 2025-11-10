@@ -533,10 +533,10 @@ const projects: Project[] = [
 {
     "id": 1,
     "title": "Minerva.ai : Medical RAG Assistant",
-    "description": "An AI-powered system providing precise, contextual health analysis based only on user-uploaded medical reports using Gemini and Pinecone.",
+    "description": "An AI-powered system providing precise, health analysis based only on user-uploaded medical reports using Gemini and Pinecone.",
     "longDescriptions": [
         "Minerva.ai solves the core problem of generic AI in health by employing a strict Retrieval-Augmented Generation (RAG) architecture. When a user queries their health status, the system retrieves relevant information only from their indexed reports before calling the Gemini LLM for synthesis, ensuring high accuracy and reducing hallucination.",
-        "The application features a secure, client-side document processing flow (File Upload -> Private Pinecone Indexing) and maintains conversational context using LangChain.js memory for multi-turn medical consultations."
+        "The application features a secure, client-side document processing flow (File Upload -> Private Pinecone Indexing)."
     ],
     "images": ["/project/med.png", "/project/med1.png", "/project/med2.png"],
     "video": "/project/med.mp4",
@@ -551,7 +551,7 @@ const projects: Project[] = [
         "Framer Motion"
     ],
     "keyFeatures": [
-        "Contextual RAG for Health (Gemini + Pinecone)",
+        "RAG for Health (Gemini + Pinecone)",
         "Zero-Knowledge Architecture (Client-side processing)",
         "Conversational Memory for Multi-Turn Consultations",
         "Isolated Data Handling (Pinecone Namespace per report)"
@@ -615,12 +615,19 @@ export default function ProjectSection() {
       className="py-20 sm:py-28 px-4 md:px-10 text-white relative z-10 min-h-screen bg-transparent"
     >
       <div className="max-w-7xl mx-auto">
-        <motion.h2
-          variants={itemVariants}
-          className="text-4xl sm:text-5xl md:text-7xl font-bold text-center mb-16 sm:mb-20 tracking-tighter"
-        >
-          My Creations
-        </motion.h2>
+       <motion.h2
+            variants={itemVariants}
+            className="text-4xl sm:text-5xl md:text-7xl font-bold text-center mb-16 sm:mb-20 tracking-tighter"
+          >
+            My Creations
+    <span className="block text-base sm:text-lg md:text-xl mt-6 text-gray-500 tracking-wide leading-relaxed">
+  Click on a project to explore its architecture, purpose, and story in detail.
+</span>
+
+
+
+          </motion.h2>
+
 
         <motion.div
           variants={containerVariants}

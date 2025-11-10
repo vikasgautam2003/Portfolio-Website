@@ -159,12 +159,12 @@ const projects: Project[] = [
   ]
 },
 {
-    "id": 9,
+    "id": 1,
     "title": "Minerva.ai : Medical RAG Assistant",
-    "description": "An AI-powered system providing precise, contextual health analysis based only on user-uploaded medical reports using Gemini and Pinecone.",
+    "description": "An AI-powered system providing precise, health analysis based only on user-uploaded medical reports using Gemini and Pinecone.",
     "longDescriptions": [
         "Minerva.ai solves the core problem of generic AI in health by employing a strict Retrieval-Augmented Generation (RAG) architecture. When a user queries their health status, the system retrieves relevant information only from their indexed reports before calling the Gemini LLM for synthesis, ensuring high accuracy and reducing hallucination.",
-        "The application features a secure, client-side document processing flow (File Upload -> Private Pinecone Indexing) and maintains conversational context using LangChain.js memory for multi-turn medical consultations."
+        "The application features a secure, client-side document processing flow (File Upload -> Private Pinecone Indexing)."
     ],
     "images": ["/project/med.png", "/project/med1.png", "/project/med2.png"],
     "video": "/project/med.mp4",
@@ -178,14 +178,14 @@ const projects: Project[] = [
         "Tailwind CSS",
         "Framer Motion"
     ],
-    
     "keyFeatures": [
-        "Contextual RAG for Health (Gemini + Pinecone)",
+        "RAG for Health (Gemini + Pinecone)",
         "Zero-Knowledge Architecture (Client-side processing)",
         "Conversational Memory for Multi-Turn Consultations",
         "Isolated Data Handling (Pinecone Namespace per report)"
     ]
 },
+
   {
     id: 7,
     title: "Hostel Committee Website",
@@ -204,6 +204,44 @@ const projects: Project[] = [
         "Student registration for events",
         "Discussion forum for hostel residents",
         "Secure media uploads with Cloudinary"
+    ]
+}
+,
+{
+    "id": 2,
+    "title": "NeuraPost : Autonomous Social Media Agent",
+    "description": "An AI-powered, multi-platform content automation system that autonomously creates and posts intelligent content across X, LinkedIn, and Instagram using Gemini and MCP architecture.",
+    "longDescriptions": [
+        "NeuraPost is an advanced social media automation agent that fuses Google's Gemini LLM with an MCP-based modular backend to intelligently generate, curate, and post content across multiple platforms. Each integration (X, LinkedIn, Instagram) is handled as a distinct MCP tool, enabling seamless multi-platform orchestration and contextual post optimization.",
+        "The project demonstrates an end-to-end autonomous AI workflow — from natural language idea generation and post synthesis to automated platform publishing — all through a real-time, futuristic chat interface inspired by agentic AI design principles. NeuraPost also features a scalable architecture, separating its Vercel-hosted Next.js frontend from the Render-hosted MCP backend for enhanced performance and modularity."
+    ],
+    "images": [
+        "/project/post1.png",
+        "/project/post2.png",
+        "/project/post.png"
+    ],
+    "video": "/project/post1.mp4",
+    "link": "https://ai-first-agent-tweet.vercel.app/",
+    "sourceCode": "https://github.com/vikasgautam2003/ai-first-agent-tweet",
+    "tech": [
+        "Next.js",
+        "Gemini AI",
+        "Node.js + Express",
+        "MCP Tool System",
+        "Twitter API v2",
+        "Framer Motion",
+        "Vercel",
+        "Render"
+    ],
+    "keyFeatures": [
+        "Tweeter-Platform AI Posting (X)",
+        "Gemini-Powered Content Generation",
+        "Modular MCP Tool Architecture",
+        "Real-Time Agentic Chat Interface",
+        "CORS-Secure Multi-Deployment Communication",
+        "Futuristic UI with Glassmorphism & Glow Animations",
+        "Auto-Length Controlled Post Generation (<280 characters)",
+        "Decoupled Frontend-Backend Hosting (Vercel + Render)"
     ]
 }
 ,
@@ -337,6 +375,37 @@ const projects: Project[] = [
     ]
   },
 
+  {
+    "id": 10,
+    "title": "Locatrix : Live Location Tracker",
+    "description": "A real-time web application that visualizes and shares users’ live GPS positions using Leaflet, OpenStreetMap, and Socket.IO for instant updates.",
+    "longDescriptions": [
+        "Locatrix enables users to view, track, and share their live location on an interactive map in real time. By leveraging the browser’s Geolocation API and Socket.IO, it continuously synchronizes user coordinates and broadcasts updates seamlessly across connected clients.",
+        "The system integrates OpenStreetMap’s Nominatim API for reverse geocoding, converting raw coordinates into human-readable addresses, and uses Unsplash API to dynamically fetch contextual images of the detected locations. The entire interface is designed with Tailwind CSS and optimized for responsive, cross-device performance."
+    ],
+    "images": ["/project/live1.png", "/project/live2.png", "/project/live.png"],
+    "video": "/project/live.mp4",
+    "link": "https://location-tracker-app-07th.onrender.com/",
+    "sourceCode": "https://github.com/vikasgautam2003/Location_Tracker__app",
+    "tech": [
+        "Node.js",
+        "Express.js",
+        "Socket.IO",
+        "Leaflet.js",
+        "OpenStreetMap (Nominatim)",
+        "Unsplash API",
+        "Tailwind CSS"
+    ],
+    "keyFeatures": [
+        "Real-Time Location Tracking via Socket.IO",
+        "Reverse Geocoding with OpenStreetMap Nominatim API",
+        "Dynamic Location-Based Photos from Unsplash API",
+        "Interactive Leaflet Map with Live Marker Updates",
+        "Responsive Sidebar UI with Coordinates and Address Display",
+        "Lightweight, Fast, and Zero-Database Architecture"
+    ]
+}
+
 
 ];
 
@@ -378,6 +447,10 @@ export default function ProjectSection() {
       <div className="max-w-7xl mx-auto mt-10">
         <motion.h2 variants={itemVariants} className="text-4xl sm:text-5xl md:text-7xl font-bold text-center mb-16 sm:mb-20 tracking-tighter">
           My Creations
+          <span className="block text-base sm:text-lg md:text-xl mt-6 text-gray-500 tracking-wide leading-relaxed">
+  Click on a project to explore its architecture, purpose, and story in detail.
+</span>
+
         </motion.h2>
 
         <motion.div variants={containerVariants} className="grid gap-8 sm:gap-12 grid-cols-1 lg:grid-cols-2">
