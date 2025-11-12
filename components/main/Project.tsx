@@ -518,7 +518,7 @@ const projects: Project[] = [
     ],
     images: ["/project/hostel2.png", "/project/hostel1.png", "/project/hostel.png"],
     video: "/project/hostel.mp4",
-    link: "https://hostel-committee-full-stack-website-vsa3.onrender.com/",
+    link: "https://hostel-committee-full-stack-website.vercel.app/",
     sourceCode: "https://github.com/vikasgautam2003/hostel-committee-full-stack-website",
     tech: ["Node.js", "Express.js", "MongoDB", "React", "Cloudinary", "JWT"],
     keyFeatures: [
@@ -556,7 +556,45 @@ const projects: Project[] = [
         "Conversational Memory for Multi-Turn Consultations",
         "Isolated Data Handling (Pinecone Namespace per report)"
     ]
+},
+{
+    "id": 6,
+    "title": "NeuraPost : Autonomous Social Media Agent",
+    "description": "An AI-powered, multi-platform content automation system that autonomously creates and posts intelligent content across X, LinkedIn, and Instagram using Gemini and MCP architecture.",
+    "longDescriptions": [
+        "NeuraPost is an advanced social media automation agent that fuses Google's Gemini LLM with an MCP-based modular backend to intelligently generate, curate, and post content across multiple platforms. Each integration (X, LinkedIn, Instagram) is handled as a distinct MCP tool, enabling seamless multi-platform orchestration and contextual post optimization.",
+        "The project demonstrates an end-to-end autonomous AI workflow — from natural language idea generation and post synthesis to automated platform publishing — all through a real-time, futuristic chat interface inspired by agentic AI design principles. NeuraPost also features a scalable architecture, separating its Vercel-hosted Next.js frontend from the Render-hosted MCP backend for enhanced performance and modularity."
+    ],
+    "images": [
+        "/project/post1.png",
+        "/project/post2.png",
+        "/project/post.png"
+    ],
+    "video": "/project/post1.mp4",
+    "link": "https://ai-first-agent-tweet.vercel.app/",
+    "sourceCode": "https://github.com/vikasgautam2003/ai-first-agent-tweet",
+    "tech": [
+        "Next.js",
+        "Gemini AI",
+        "Node.js + Express",
+        "MCP Tool System",
+        "Twitter API v2",
+        "Framer Motion",
+        "Vercel",
+        "Render"
+    ],
+    "keyFeatures": [
+        "Tweeter-Platform AI Posting (X)",
+        "Gemini-Powered Content Generation",
+        "Modular MCP Tool Architecture",
+        "Real-Time Agentic Chat Interface",
+        "CORS-Secure Multi-Deployment Communication",
+        "Futuristic UI with Glassmorphism & Glow Animations",
+        "Auto-Length Controlled Post Generation (<280 characters)",
+        "Decoupled Frontend-Backend Hosting (Vercel + Render)"
+    ]
 }
+,
 ];
 
 // --- ANIMATION VARIANTS ---

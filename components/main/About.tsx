@@ -192,7 +192,7 @@ const About: React.FC = () => {
             className="flex items-center gap-3 w-full sm:w-auto justify-center py-3 px-6 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg shadow-lg transition-all duration-300"
           >
             <ArrowDownTrayIcon className="w-6 h-6" />
-            Download CV
+            Download Resume
           </motion.a>
         </motion.div>
       </motion.div>

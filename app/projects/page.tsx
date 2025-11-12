@@ -196,7 +196,7 @@ const projects: Project[] = [
     ],
     images: ["/project/hostel2.png", "/project/hostel1.png", "/project/hostel.png"],
     video: "/project/hostel.mp4",
-    link: "https://hostel-committee-full-stack-website-vsa3.onrender.com/",
+    link: "https://hostel-committee-full-stack-website.vercel.app/",
     sourceCode: "https://github.com/vikasgautam2003/hostel-committee-full-stack-website",
     tech: ["Node.js", "Express.js", "MongoDB", "React", "Cloudinary", "JWT"],
     keyFeatures: [
