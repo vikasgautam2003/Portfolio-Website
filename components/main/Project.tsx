@@ -597,7 +597,7 @@ const projects: Project[] = [
 ,
 ];
 
-// --- ANIMATION VARIANTS ---
+
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.3 } },
@@ -768,7 +768,7 @@ function ProjectModal({ selectedProject, setSelectedProject }: ProjectModalProps
             className="bg-slate-900/70 border border-white/20 rounded-3xl w-full max-w-4xl h-[100vh] overflow-y-auto shadow-2xl relative"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
+         
             <button
               onClick={() => setSelectedProject(null)}
               className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white z-50 bg-black/70 p-2 rounded-full hover:bg-white/20 transition-colors text-2xl"
@@ -776,7 +776,7 @@ function ProjectModal({ selectedProject, setSelectedProject }: ProjectModalProps
               <FiX />
             </button>
 
-            {/* Header Image */}
+         
             <div className="relative h-64 sm:h-96">
               <Image
                 src={selectedProject.images[0] || "/placeholder.jpg"}
@@ -792,7 +792,7 @@ function ProjectModal({ selectedProject, setSelectedProject }: ProjectModalProps
               </div>
             </div>
 
-            {/* Modal Content */}
+          
             <div className="p-6 sm:p-10">
               <p className="text-base sm:text-lg text-gray-300 mb-4 font-bold">
                 {selectedProject.description}
@@ -800,7 +800,7 @@ function ProjectModal({ selectedProject, setSelectedProject }: ProjectModalProps
 
 
               {selectedProject?.message && (
-                <div className="flex items-center gap-2 p-3 rounded-lg bg-yellow-100 border border-yellow-400 text-yellow-800">
+                <div className="flex items-center mt-10 mb-10 gap-2 p-3 rounded-lg bg-yellow-100 border border-yellow-400 text-yellow-800">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-5 h-5 text-yellow-600"
