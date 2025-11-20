@@ -976,6 +976,7 @@ const projects: Project[] = [
         "Shadcn/UI (Custom Implementation)",
         "Web Streams API"
     ],
+    "message":"This website is best viewed on larger devices like desktops, laptops, or tablets. Mobile devices are not fully supported at the moment.",
     keyFeatures: [
         "🚀 Real-Time Streaming: Watch the code being written character-by-character with a 'Matrix-style' typing effect.",
         "🛡️ Sandboxed Execution: Safely renders generated React code in an isolated browser environment using Sandpack.",
@@ -1046,7 +1047,6 @@ const projects: Project[] = [
 
 ];
 
-
 export default function ProjectSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
@@ -1065,7 +1065,6 @@ export default function ProjectSection() {
           </span>
         </h2>
 
-    
         <div className="grid gap-8 sm:gap-12 grid-cols-1 lg:grid-cols-2">
           {projects.map((project) => (
             <div
@@ -1076,6 +1075,7 @@ export default function ProjectSection() {
               <div className="relative w-full h-64 sm:h-80 overflow-hidden">
                 <img
                   src={project.images[0]}
+                  alt={project.title}
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
@@ -1090,10 +1090,12 @@ export default function ProjectSection() {
                   {project.description}
                 </p>
 
-
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.tech.slice(0, 4).map((tech) => (
-                    <span key={tech} className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">
+                    <span
+                      key={tech}
+                      className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -1116,16 +1118,22 @@ export default function ProjectSection() {
           </a>
         </div>
 
-        {/* Modal still animated */}
-        <ProjectModal selectedProject={selectedProject} setSelectedProject={setSelectedProject} />
+        <ProjectModal
+          selectedProject={selectedProject}
+          setSelectedProject={setSelectedProject}
+        />
       </div>
     </section>
   );
 }
 
-
-
-function ProjectModal({ selectedProject, setSelectedProject }: { selectedProject: Project | null; setSelectedProject: any }) {
+function ProjectModal({
+  selectedProject,
+  setSelectedProject,
+}: {
+  selectedProject: Project | null;
+  setSelectedProject: (project: Project | null) => void;
+}) {
   return (
     <AnimatePresence>
       {selectedProject && (
@@ -1143,7 +1151,6 @@ function ProjectModal({ selectedProject, setSelectedProject }: { selectedProject
             className="bg-slate-900/70 border border-white/20 rounded-3xl w-full max-w-4xl h-[100vh] overflow-y-auto shadow-2xl relative"
             onClick={(e) => e.stopPropagation()}
           >
-           
             <button
               onClick={() => setSelectedProject(null)}
               className="absolute top-4 right-4 bg-black/70 p-2 rounded-full hover:bg-white/20"
@@ -1151,18 +1158,23 @@ function ProjectModal({ selectedProject, setSelectedProject }: { selectedProject
               <FiX />
             </button>
 
-         
             <div className="relative h-64 sm:h-96">
-              <Image src={selectedProject.images[0]} alt={selectedProject.title} fill className="object-cover rounded-t-3xl" />
+              <Image
+                src={selectedProject.images[0]}
+                alt={selectedProject.title}
+                fill
+                className="object-cover rounded-t-3xl"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
               <div className="absolute bottom-10 left-10">
                 <h2 className="text-4xl font-bold">{selectedProject.title}</h2>
               </div>
             </div>
 
-         
             <div className="p-6 sm:p-10">
-              <p className="text-gray-300 text-lg font-bold mb-4">{selectedProject.description}</p>
+              <p className="text-gray-300 text-lg font-bold mb-4">
+                {selectedProject.description}
+              </p>
 
               {selectedProject.message && (
                 <div className="bg-yellow-100 border border-yellow-400 text-yellow-800 p-4 rounded-lg mb-6">
@@ -1184,31 +1196,56 @@ function ProjectModal({ selectedProject, setSelectedProject }: { selectedProject
               </ul>
 
               <div className="flex justify-center my-10">
-                <a href={selectedProject.sourceCode} target="_blank" className="bg-green-600 px-6 py-3 rounded-full hover:bg-green-700">
+                <a
+                  href={selectedProject.sourceCode}
+                  target="_blank"
+                  className="bg-green-600 px-6 py-3 rounded-full hover:bg-green-700"
+                >
                   View Source Code
                 </a>
               </div>
 
               {selectedProject.video && (
                 <div className="rounded-xl overflow-hidden border border-white/10 mb-10 aspect-video">
-                  <video src={selectedProject.video} autoPlay loop muted className="w-full" />
+                  <video
+                    src={selectedProject.video}
+                    autoPlay
+                    loop
+                    muted
+                    className="w-full"
+                  />
                 </div>
               )}
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {selectedProject.images.slice(1).map((img, i) => (
-                  <div key={i} className="relative h-48 sm:h-64 rounded-xl overflow-hidden">
-                    <Image src={img} alt={selectedProject.title} fill className="object-cover" />
+                  <div
+                    key={i}
+                    className="relative h-48 sm:h-64 rounded-xl overflow-hidden"
+                  >
+                    <Image
+                      src={img}
+                      alt={selectedProject.title}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                 ))}
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href={selectedProject.link} target="_blank" className="flex-1 bg-purple-600 px-6 py-3 rounded-full text-center hover:bg-purple-700">
+                <a
+                  href={selectedProject.link}
+                  target="_blank"
+                  className="flex-1 bg-purple-600 px-6 py-3 rounded-full text-center hover:bg-purple-700"
+                >
                   View Project
                 </a>
 
-                <button onClick={() => setSelectedProject(null)} className="flex-1 bg-gray-800 px-6 py-3 rounded-full hover:bg-gray-700">
+                <button
+                  onClick={() => setSelectedProject(null)}
+                  className="flex-1 bg-gray-800 px-6 py-3 rounded-full hover:bg-gray-700"
+                >
                   Close
                 </button>
               </div>

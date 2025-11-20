@@ -89,7 +89,7 @@ const projects: Project[] = [
     ]
   },
 {
-    id: 12,
+    id: 13,
     title: "Draftify.ai - The AI Web App Architect",
     description: "A next-generation AI coding platform that generates, previews, and refines full-stack web applications instantly.",
     longDescriptions: [
@@ -110,6 +110,7 @@ const projects: Project[] = [
         "Shadcn/UI (Custom Implementation)",
         "Web Streams API"
     ],
+    "message":"This website is best viewed on larger devices like desktops, laptops, or tablets. Mobile devices are not fully supported at the moment.",
     keyFeatures: [
         "🚀 Real-Time Streaming: Watch the code being written character-by-character with a 'Matrix-style' typing effect.",
         "🛡️ Sandboxed Execution: Safely renders generated React code in an isolated browser environment using Sandpack.",
