@@ -88,7 +88,37 @@ const projects: Project[] = [
       "Full-stack, multi-service architecture with a dedicated, Dockerized AI backend"
     ]
   },
-
+{
+    id: 12,
+    title: "Draftify.ai - The AI Web App Architect",
+    description: "A next-generation AI coding platform that generates, previews, and refines full-stack web applications instantly.",
+    longDescriptions: [
+        "Draftify.ai redefines rapid prototyping by combining the speed of LLMs with a secure, browser-based execution environment. It allows users to generate complex, interactive React applications just by describing them in plain English.",
+        "Unlike standard code generators, Draftify features a 'Simulated Backend' architecture that mimics real-world database latency and state management, making generated apps feel fully functional."
+    ],
+  
+    images: ["/project/gen.png", "/project/gen1.png", "/project/gen2.png"],
+    video: "/project/gen.mp4", 
+    link: "https://draftify-ai-builder.vercel.app/",
+    sourceCode: "https://github.com/vikasgautam2003/draftify-ai", 
+    tech: [
+        "Next.js 14 (App Router)",
+        "Google Gemini 2.5 Flash (AI Model)",
+        "Sandpack (Browser Bundler)",
+        "Tailwind CSS & Lucide React",
+        "Framer Motion",
+        "Shadcn/UI (Custom Implementation)",
+        "Web Streams API"
+    ],
+    keyFeatures: [
+        "🚀 Real-Time Streaming: Watch the code being written character-by-character with a 'Matrix-style' typing effect.",
+        "🛡️ Sandboxed Execution: Safely renders generated React code in an isolated browser environment using Sandpack.",
+        "🎨 Built-in UI Kit: Pre-loaded with a custom 'Shadcn-lite' component library so the AI generates polished, beautiful designs by default.",
+        "💾 Simulated Backend: Mimics API calls, loading states, and database persistence using advanced state management techniques.",
+        "🔄 Context-Aware Memory: The AI remembers your previous requests, allowing for iterative refinement (e.g., 'Make the button blue').",
+        "📦 One-Click Export: Users can download their generated project as a production-ready React codebase."
+    ]
+},
 
     {
   "id": 2,
@@ -186,27 +216,37 @@ const projects: Project[] = [
     ]
 },
 
-  {
-    id: 5,
-    title: "Hostel Committee Website",
-    description: "A full-stack platform for managing hostel events, student participation, and discussions.",
+ {
+    id: 3,
+    title: "Hostel Committee Web Portal (HOSTYEL)",
+    description: "A comprehensive Student Living OS and Hostel Management System powered by Generative AI.",
     longDescriptions: [
-        "This website allows admins to create and manage hostel events, while students can register, participate, and engage in discussions.",
-        "It features secure JWT authentication, media uploads via Cloudinary, responsive design, and a dynamic interface built with React for a smooth user experience."
+        "A full-scale digital ecosystem designed to digitize hostel life. It automates administrative tasks like room allocation, gate passes, and complaints while fostering a vibrant student community through a dedicated social feed.",
+        "The platform stands out with its 'Hosty' AI Assistant—a RAG (Retrieval-Augmented Generation) chatbot that answers queries based on hostel rules. The UI features immersive, gamified elements like a 'System Boot' loader and magical modals, built with Framer Motion."
     ],
     images: ["/project/hostel2.png", "/project/hostel1.png", "/project/hostel.png"],
     video: "/project/hostel.mp4",
     link: "https://hostel-committee-full-stack-website.vercel.app/",
     sourceCode: "https://github.com/vikasgautam2003/hostel-committee-full-stack-website",
-    tech: ["Node.js", "Express.js", "MongoDB", "React", "Cloudinary", "JWT"],
+    tech: [
+        "React.js", 
+        "Node.js & Express", 
+        "MongoDB", 
+        "Google Gemini AI", 
+        "Pinecone Vector DB", 
+        "Framer Motion", 
+        "Cloudinary"
+    ],
     keyFeatures: [
-        "Event creation and management",
-        "Student registration for events",
-        "Discussion forum for hostel residents",
-        "Secure media uploads with Cloudinary"
+        "🧠 AI Concierge ('Hosty'): A RAG-based chatbot trained on hostel data to answer student queries instantly.",
+        "🏨 Smart Booking Engine: Date-based room availability checks with conflict prevention logic.",
+        "🛂 Gate Pass System: Digital leave application workflow with real-time Admin approval/rejection.",
+        "📢 'Common Room' Feed: A social platform for students to post updates, photos, and view profiles.",
+        "🛠️ 'Solve-It' Hub: A streamlined ticketing system for filing and tracking maintenance complaints.",
+        "⚡ Immersive UI/UX: Features a 'Solo Leveling' style system-boot loader and animated interaction modals.",
+        "🛡️ Admin Command Center: A dashboard to monitor bookings, manage requests, and broadcast announcements."
     ]
-}
-,
+},
 {
     "id": 6,
     "title": "NeuraPost : Autonomous Social Media Agent",
