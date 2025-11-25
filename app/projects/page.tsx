@@ -102,12 +102,11 @@ const projects: Project[] = [
     link: "https://draftify-ai-builder.vercel.app/",
     sourceCode: "https://github.com/vikasgautam2003/draftify-ai", 
     tech: [
-        "Next.js 14 (App Router)",
-        "Google Gemini 2.5 Flash (AI Model)",
-        "Sandpack (Browser Bundler)",
+        "Next.js 14",
+        "Google Gemini",
+        "Sandpack",
         "Tailwind CSS & Lucide React",
         "Framer Motion",
-        "Shadcn/UI (Custom Implementation)",
         "Web Streams API"
     ],
     "message":"This website is best viewed on larger devices like desktops, laptops, or tablets. Mobile devices are not fully supported at the moment.",
@@ -372,6 +371,55 @@ const projects: Project[] = [
   ]
 },
 
+{
+  id: 22,
+  title: "FormForge.ai – AI Form Generator",
+  description:
+    "An AI-powered tool that converts natural language prompts into clean JSON form schemas and instantly renders a fully styled, production-ready UI.",
+
+  longDescriptions: [
+    "FormForge.ai allows users to describe any form in plain language and instantly generates a structured JSON schema. The schema is then rendered into a modern, beautifully styled React form using a premium UI layout.",
+    
+    "With built-in export tools, users can copy the form schema to the clipboard or download it as a JSON file. The interface features a polished SaaS-style design with animations, staggered reveals, and a fully responsive layout."
+  ],
+
+  images: [
+    "/project/form.png",
+    "/project/form1.png",
+    "/project/form2.png"
+  ],
+
+  video: "/project/form.mp4",
+
+  link: "https://form-forge-ai.vercel.app/",
+  sourceCode: "https://github.com/vikasgautam2003/FormForge.ai",
+
+  tech: [
+    "Next.js 14",
+    "React + Client Components",
+    "Google Gemini Flash-Latest",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Clipboard",
+    "JSON File Export"
+  ],
+
+
+  keyFeatures: [
+    "⚡ AI Form Generation – Converts any natural language prompt into a structured JSON form schema.",
+    
+    "🖥️ Live Form Rendering – Renders the generated schema instantly into a premium styled React form.",
+    
+    "📋 Copy Schema – One-click copy-to-clipboard for the generated JSON.",
+    
+    "📁 Export JSON File – Download the generated schema as a production-ready .json file.",
+    
+    "✨ Premium UI & Animations – Glassmorphism cards, modern gradients, smooth hover effects, and Framer Motion animations.",
+    
+    "📱 Responsive Layout – Fully optimized for desktop and modern browsers."
+  ]
+}
+,
 
 
  {

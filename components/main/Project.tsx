@@ -968,12 +968,11 @@ const projects: Project[] = [
     link: "https://draftify-ai-builder.vercel.app/",
     sourceCode: "https://github.com/vikasgautam2003/draftify-ai", 
     tech: [
-        "Next.js 14 (App Router)",
-        "Google Gemini 2.5 Flash (AI Model)",
-        "Sandpack (Browser Bundler)",
+        "Next.js 14",
+        "Google Gemini",
+        "Sandpack",
         "Tailwind CSS & Lucide React",
         "Framer Motion",
-        "Shadcn/UI (Custom Implementation)",
         "Web Streams API"
     ],
     "message":"This website is best viewed on larger devices like desktops, laptops, or tablets. Mobile devices are not fully supported at the moment.",
