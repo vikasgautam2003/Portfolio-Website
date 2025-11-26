@@ -965,8 +965,8 @@ const projects: Project[] = [
   
     images: ["/project/gen.png", "/project/gen1.png", "/project/gen2.png"],
     video: "/project/gen.mp4", 
-    link: "https://draftify-ai-builder.vercel.app/",
-    sourceCode: "https://github.com/vikasgautam2003/draftify-ai", 
+    link: "https://draftify-ai-omega.vercel.app/",
+    sourceCode: "https://github.com/vikasgautam2003/Draftify.ai", 
     tech: [
         "Next.js 14",
         "Google Gemini",
