@@ -155,6 +155,54 @@ const projects: Project[] = [
     ]
 }
 ,
+{
+    id: 21,
+    title: "BlueprintX – AI System Architecture Generator",
+    description: "An advanced AI architect that converts ideas into production-ready diagrams, tech stacks, and system explanations instantly.",
+    
+    longDescriptions: [
+        "BlueprintX is a next-generation AI architecture assistant built to help engineers, founders, and students design scalable backend systems with unprecedented speed and clarity.",
+        "The platform generates fully structured Mermaid diagrams, categorized tech stacks, scaling strategies, and deep system explanations – all through a Devin-style interface polished for a premium user experience."
+    ],
+
+    images: [
+        "/project/sys.png",
+        "/project/sys1.png",
+        "/project/sys2.png"
+    ],
+
+    video: "/sys.mp4",
+
+    link: "https://blueprintx.vercel.app/",
+    sourceCode: "https://github.com/vikasgautam2003/BlueprintX.ai",
+
+    tech: [
+        "Next.js 15",
+        "Google Gemini 2.5 Flash",
+        "Groq LLM",
+        "Mermaid.js",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Shadcn UI (custom components)",
+        "Vercel Deployment"
+    ],
+
+    message: "Best experienced on desktops, laptops, or large tablets. The platform's diagramming and modals require a wider viewport for the full architecture workflow.",
+
+    keyFeatures: [
+        "🧠 Dual AI Modes: Architecture Mode (Gemini) and Tech Mentor Mode (Groq) for two completely different problem-solving experiences.",
+        "📊 Instant Architecture Generation: Converts any idea into a clean, valid Mermaid diagram with strict grammar enforcement and auto-repair for broken syntax.",
+        "🧰 Full Tech Stack Generator: Produces categorized tech stacks—Frontend, Backend, Database, Cache, DevOps, AI/ML, Queue, and more—with recommended + alternative technologies.",
+        "📘 Deep Explanation Engine: Creates highly structured breakdowns covering architecture reasoning, scaling, protocols, caching, and security layers.",
+        "🪟 Futuristic Modal System: Premium polished modals for Explanations, Tech Stacks, and Video Demo with glassmorphism and motion effects.",
+        "🔍 Fullscreen Diagram Mode: View the architecture in full-screen for presentations or detailed inspection.",
+        "⬇️ SVG Export: Download generated diagrams instantly in high-quality vector format.",
+        "🤖 Devin-Style UI: Gradient glass panels, neon glows, depth shadows, and smooth animations for a futuristic developer experience.",
+        "💬 Persistent Chat Memory: Conversations in both Architect and Tech modes retain context for iterative refinement.",
+        "📽️ Demo Video Popup: Plays the project demo inside a premium 800px modal with descriptions below."
+    ]
+}
+,
 
 
     {
