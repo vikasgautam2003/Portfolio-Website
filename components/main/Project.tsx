@@ -930,8 +930,39 @@ interface Project {
 
 
 const projects: Project[] = [
+  {
+    id: 1,
+    title: "Package Forge - Autonomous NPM Package Architect",
+    description: "A Private PaaS that autonomously architects, tests in Docker, and publishes npm packages using a hybrid cloud-local engine.",
+    longDescriptions: [
+        "Package Forge bridges the gap between AI code generation and reliable software delivery. It utilizes a novel 'Hybrid Cloud' architecture where the frontend lives on the Edge (Vercel) while the heavy compute and secure sandboxing happen on your local machine.",
+        "Unlike simple code generators, Package Forge implements a rigorous 'Quality Gate'. Every line of AI-generated code is compiled and tested inside an ephemeral Docker container. If the build fails, the AI self-heals and retries automatically before the user ever sees the code."
+    ],
+    
+    images: ["/project/pack.png", "/project/Pack1.png", "/project/Pack2.png"],
+    video: "/project/pack.mp4", 
+    link: "https://package-forge-web.vercel.app/",
+    sourceCode: "https://github.com/vikasgautam2003/Package-Forge/", 
+    tech: [
+        "Next.js 14 (Turborepo)",
+        "Node.js Worker",
+        "Docker & Sandboxing",
+        "Upstash Redis & BullMQ",
+        "Google Gemini Pro",
+        "Tailwind CSS"
+    ],
+    "message": "To generate packages, the companion 'Worker' script must be running on your local machine to handle Docker operations.",
+    keyFeatures: [
+        "🌩️ Hybrid 'Hacker' Architecture: Combines the accessibility of Vercel with the unlimited compute power of your local machine via a Redis bridge.",
+        "☣️ Docker 'Hazard Suit': Safely executes and validates AI-generated code in ephemeral containers to prevent broken builds.",
+        "🧠 Self-Healing AI: If a package fails unit tests, the system automatically feeds the error logs back to Gemini to fix the code without human intervention.",
+        "📡 Mission Control Dashboard: A real-time UI featuring live streaming logs, file system exploration, and a visual heartbeat monitor.",
+        "💓 Live System Heartbeat: Smart synchronization that detects if your local worker is online or sleeping and updates the UI instantly.",
+        "🚀 One-Click NPM Publishing: Handles the complex process of versioning, packing, and pushing to the public npm registry automatically."
+    ]
+},
      {
-    "id": 1,
+    "id": 2,
     "title": "Sentinel.ai Mock Test Platform",
     "description": "A full-stack, AI-powered proctoring platform to ensure academic integrity in online examinations.",
     "longDescriptions": [
@@ -955,9 +986,9 @@ const projects: Project[] = [
 
 
 {
-    id: 12,
-    title: "Draftify.ai - The AI Web App Architect",
-    description: "A next-generation AI coding platform that generates, previews, and refines full-stack web applications instantly.",
+    id: 3,
+    title: "Draftify.ai - The AI Frontend Web App Architect",
+    description: "A next-generation AI coding platform that generates, previews, and refines Frontend instantly.",
     longDescriptions: [
         "Draftify.ai redefines rapid prototyping by combining the speed of LLMs with a secure, browser-based execution environment. It allows users to generate complex, interactive React applications just by describing them in plain English.",
         "Unlike standard code generators, Draftify features a 'Simulated Backend' architecture that mimics real-world database latency and state management, making generated apps feel fully functional."
@@ -985,8 +1016,73 @@ const projects: Project[] = [
         "📦 One-Click Export: Users can download their generated project as a production-ready React codebase."
     ]
 },
+{
+    id: 4,
+    title: "BackNest.ai – The AI Backend Architect",
+    description: "A powerful AI-driven backend generator that produces complete, production-grade backend architectures with modular files, controllers, routes, models, middleware, and services — all from a single prompt.",
+    longDescriptions: [
+        "BackNest.ai transforms backend development by converting natural-language descriptions into fully modular, multi-file backend architectures. It supports Express, Next.js App Router, multiple databases, and generates clean, scalable folder structures.",
+        "Unlike conventional API generators, BackNest.ai creates entire ecosystems — from routing layers and controllers to services, authentication logic, schemas, middleware, and utilities — ensuring production-ready quality out of the box."
+    ],
+  
+    images: ["/project/back.png", "/project/back1.png", "/project/back2.png"],
+    video: "/project/back.mp4",
+    link: "https://backend-code-generator-node-js-next.vercel.app/",
+    sourceCode: "https://github.com/vikasgautam2003/Backend-code-generator-NODE-JS-NEXT-",
+    
+    tech: [
+        "Next.js 14",
+        "Google Gemini ",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Node.js",
+        "REST & Modular Architecture Standards"
+    ],
+    
+    message: "For optimal experience, BackNest.ai is best used on desktop or laptop devices due to its multi-pane, development-style interface.",
+
+    keyFeatures: [
+        "🧩 Multi-File Backend Generation: Produces a complete folder structure including controllers, models, routes, middleware, utils, config, and services.",
+        "⚙️ Runtime-Aware Engineering: Generates code tailored for Express.js or Next.js App Router with correct handlers, patterns, and conventions.",
+        "🗄️ Database-Specific Logic: Mongoose, Prisma, PostgreSQL (pg), and Sequelize logic automatically integrated based on user selection.",
+        "📁 File Tabs Interface: Users can switch between generated files (server.js, models/user.js, controllers/auth.js, etc.) in a smooth IDE-style UI.",
+        "🧠 Smart Prompt Interpretation: Converts natural-language instructions into robust backend business logic with validation, sanitization, and error-handling.",
+        "🔒 Production-Grade Patterns: Async/await, error boundaries, status codes, JWT auth, and modular folder structure generated by default.",
+        "🚀 Zero Setup: Generate full backend projects instantly without any boilerplate or manual configuration."
+    ]
+}
+,
+
+{
+    "id": 5,
+    "title": "Minerva.ai : Medical RAG Assistant",
+    "description": "An AI-powered system providing precise, health analysis based only on user-uploaded medical reports using Gemini and Pinecone.",
+    "longDescriptions": [
+        "Minerva.ai solves the core problem of generic AI in health by employing a strict Retrieval-Augmented Generation (RAG) architecture. When a user queries their health status, the system retrieves relevant information only from their indexed reports before calling the Gemini LLM for synthesis, ensuring high accuracy and reducing hallucination.",
+        "The application features a secure, client-side document processing flow (File Upload -> Private Pinecone Indexing)."
+    ],
+    "images": ["/project/med.png", "/project/med1.png", "/project/med2.png"],
+    "video": "/project/med.mp4",
+    "link": "https://minervaai.vercel.app/",
+    "sourceCode": "https://github.com/vikasgautam2003/minervaAI---RAG-chatbot",
+    "tech": [
+        "Next.js (TS)",
+        "Gemini AI",
+        "Pinecone",
+        "LangChain.js",
+        "Tailwind CSS",
+        "Framer Motion"
+    ],
+    "keyFeatures": [
+        "RAG for Health (Gemini + Pinecone)",
+        "Zero-Knowledge Architecture (Client-side processing)",
+        "Conversational Memory for Multi-Turn Consultations",
+        "Isolated Data Handling (Pinecone Namespace per report)"
+    ]
+},
+
  {
-    id: 3,
+    id: 6,
     title: "Hostel Committee Web Portal (HOSTYEL)",
     description: "A comprehensive Student Living OS and Hostel Management System powered by Generative AI.",
     longDescriptions: [
@@ -1014,33 +1110,6 @@ const projects: Project[] = [
         "🛠️ 'Solve-It' Hub: A streamlined ticketing system for filing and tracking maintenance complaints.",
         "⚡ Immersive UI/UX: Features a 'Solo Leveling' style system-boot loader and animated interaction modals.",
         "🛡️ Admin Command Center: A dashboard to monitor bookings, manage requests, and broadcast announcements."
-    ]
-},
-{
-    "id": 4,
-    "title": "Minerva.ai : Medical RAG Assistant",
-    "description": "An AI-powered system providing precise, health analysis based only on user-uploaded medical reports using Gemini and Pinecone.",
-    "longDescriptions": [
-        "Minerva.ai solves the core problem of generic AI in health by employing a strict Retrieval-Augmented Generation (RAG) architecture. When a user queries their health status, the system retrieves relevant information only from their indexed reports before calling the Gemini LLM for synthesis, ensuring high accuracy and reducing hallucination.",
-        "The application features a secure, client-side document processing flow (File Upload -> Private Pinecone Indexing)."
-    ],
-    "images": ["/project/med.png", "/project/med1.png", "/project/med2.png"],
-    "video": "/project/med.mp4",
-    "link": "https://minervaai.vercel.app/",
-    "sourceCode": "https://github.com/vikasgautam2003/minervaAI---RAG-chatbot",
-    "tech": [
-        "Next.js (TS)",
-        "Gemini AI",
-        "Pinecone",
-        "LangChain.js",
-        "Tailwind CSS",
-        "Framer Motion"
-    ],
-    "keyFeatures": [
-        "RAG for Health (Gemini + Pinecone)",
-        "Zero-Knowledge Architecture (Client-side processing)",
-        "Conversational Memory for Multi-Turn Consultations",
-        "Isolated Data Handling (Pinecone Namespace per report)"
     ]
 },
 
