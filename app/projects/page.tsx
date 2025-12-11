@@ -151,6 +151,28 @@ const projects: Project[] = [
     ]
 },
 {
+  "id": 2,
+  "title": "Alison IDE - Browser-Native AI Environment",
+  "description": "A futuristic, browser-based IDE that boots a full Node.js container locally, powered by an intelligent AI coding assistant.",
+  "longDescriptions": [
+    "Alison is a cutting-edge development platform that eliminates the need for local environments or heavy cloud VMs. By leveraging WebContainers, it boots a secure, full-stack Node.js environment directly inside your browser tab in milliseconds.",
+    "The platform features a deeply integrated AI Copilot capable of reading your file system, generating complex components, and performing surgical code refactors. With a fully functional Xterm.js terminal and instant hot-reloading preview, Alison provides a complete development lifecycle from prompt to deployment."
+  ],
+  "images": ["/project/Alison.png", "/project/alison1.png", "/project/alison2.png"],
+  "video": "/project/alison.mp4",
+  "link": "https://ai-powered-browser-ide-project.vercel.app/",
+  "sourceCode": "https://github.com/vikasgautam2003/AI-Powered-Browser-IDE-Project",
+  "tech": ["Next.js", "TypeScript", "WebContainers", "Gemini API", "Xterm.js", "Tailwind CSS", "Zustand"],
+  "message": "This application utilizes advanced browser APIs (SharedArrayBuffer) and is optimized for Desktop Chrome, Edge, or Arc browsers.",
+  "keyFeatures": [
+    "Zero-latency Node.js environment running entirely in the browser",
+    "Context-aware AI Copilot for full-file generation and refactoring",
+    "Integrated terminal with support for npm install, git, and scripts",
+    "Secure, sandboxed live preview with instant hot-reloading",
+    "Virtual file system with persistence and surgical update capabilities"
+  ]
+},
+{
     id: 4,
     title: "BackNest.ai – The AI Backend Architect",
     description: "A powerful AI-driven backend generator that produces complete, production-grade backend architectures with modular files, controllers, routes, models, middleware, and services — all from a single prompt.",
