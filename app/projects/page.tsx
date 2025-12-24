@@ -120,7 +120,49 @@ const projects: Project[] = [
     ]
 },
 {
-    id: 3,
+  "id": 3,
+  "title": "OpsChat — Natural Language DevOps Interface",
+  "description": "A chat-driven DevOps platform that allows developers to interact with Docker containers and Kubernetes workloads locally using plain English, without writing commands.",
+  "longDescriptions": [
+    "OpsChat is a safety-first DevOps interface designed to remove the cognitive burden of learning Docker and Kubernetes commands. Instead of exposing CLI tools, it translates natural language intent into bounded, read-only infrastructure operations, ensuring deterministic and secure execution.",
+    "The system is built on a queue-based execution architecture with isolated workers for Docker and Kubernetes, real-time terminal log streaming, and intelligent health analysis. OpsChat also includes a local presence sensor that detects when the execution environment is unavailable and clearly communicates system readiness to the user, preventing silent failures."
+  ],
+  "images": [
+    "/project/dev.png",
+    "/project/dev1.png",
+    "/project/dev2.png"
+  ],
+  "video": "/project/dev.mp4",
+  "link": "https://chat-ops-steel.vercel.app/",
+  "sourceCode": "https://github.com/vikasgautam2003/Chat-Ops",
+  "tech": [
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Express",
+    "BullMQ",
+    "Redis",
+    "Docker",
+    "Kubernetes",
+    "WebSockets",
+    "Groq LLM API",
+    "Tailwind CSS"
+  ],
+  "message": "OpsChat is intentionally scoped to local environments and read-only operations to prioritize safety, clarity, and beginner-friendly DevOps exploration.",
+  "keyFeatures": [
+    "Natural language interface for Docker and Kubernetes without CLI usage",
+    "Deterministic intent-to-action routing with strict safety constraints",
+    "Isolated worker architecture for Docker and Kubernetes operations",
+    "Real-time terminal-style log streaming via WebSockets",
+    "Kubernetes health intelligence with human-readable explanations",
+    "Global system status indicator showing execution readiness",
+    "Local execution presence detection to prevent unsafe operations",
+    "Clean separation between visibility, generation, and execution layers"
+  ]
+}
+,
+{
+    id: 4,
     title: "Draftify.ai - The AI Web App Architect",
     description: "A next-generation AI coding platform that generates, previews, and refines full-stack web applications instantly.",
     longDescriptions: [
@@ -151,7 +193,7 @@ const projects: Project[] = [
     ]
 },
 {
-  "id": 2,
+  "id": 5,
   "title": "Alison IDE - Browser-Native AI Environment",
   "description": "A futuristic, browser-based IDE that boots a full Node.js container locally, powered by an intelligent AI coding assistant.",
   "longDescriptions": [
@@ -173,7 +215,7 @@ const projects: Project[] = [
   ]
 },
 {
-    id: 4,
+    id: 6,
     title: "BackNest.ai – The AI Backend Architect",
     description: "A powerful AI-driven backend generator that produces complete, production-grade backend architectures with modular files, controllers, routes, models, middleware, and services — all from a single prompt.",
     longDescriptions: [
@@ -209,7 +251,7 @@ const projects: Project[] = [
 }
 ,
 {
-    id: 5,
+    id: 7,
     title: "BlueprintX – AI System Architecture Generator",
     description: "An advanced AI architect that converts ideas into production-ready diagrams, tech stacks, and system explanations instantly.",
     
@@ -259,7 +301,7 @@ const projects: Project[] = [
 
 
     {
-  "id": 6,
+  "id": 8,
   "title": "QueryAI",
   "description": "An AI-powered search engine that provides summarized, sourced answers from real-time web results, inspired by Perplexity.",
   "longDescriptions": [
@@ -295,7 +337,7 @@ const projects: Project[] = [
   ]
 },
 {
-  "id": 7,
+  "id": 9,
   "title": "CogniCare AI: RAG Mental Health Chatbot",
   "description": "A RAG-powered, empathetic AI chatbot for mental health support.",
   "longDescriptions": [
@@ -327,7 +369,7 @@ const projects: Project[] = [
   ]
 },
 {
-    "id": 8,
+    "id": 10,
     "title": "Minerva.ai : Medical RAG Assistant",
     "description": "An AI-powered system providing precise, health analysis based only on user-uploaded medical reports using Gemini and Pinecone.",
     "longDescriptions": [
@@ -355,7 +397,7 @@ const projects: Project[] = [
 },
 
  {
-    id: 9,
+    id: 11,
     title: "Hostel Committee Web Portal (HOSTYEL)",
     description: "A comprehensive Student Living OS and Hostel Management System powered by Generative AI.",
     longDescriptions: [
@@ -386,7 +428,7 @@ const projects: Project[] = [
     ]
 },
 {
-    "id": 10,
+    "id": 12,
     "title": "NeuraPost : Autonomous Social Media Agent",
     "description": "An AI-powered, multi-platform content automation system that autonomously creates and posts intelligent content across X, LinkedIn, and Instagram using Gemini and MCP architecture.",
     "longDescriptions": [
@@ -425,7 +467,7 @@ const projects: Project[] = [
 ,
 
 {
-  "id": 11,
+  "id": 13,
   "title": "OnePngAi",
   "description": "An AI-powered image generator for creating high-quality, transparent PNG assets.",
   "longDescriptions": [
@@ -455,7 +497,7 @@ const projects: Project[] = [
   ]
 },
 {
-  "id": 12,
+  "id": 14,
   "title": "VidQuery: YouTube RAG Chatbot",
   "description": "An AI-powered RAG chatbot that allows users to ask questions about YouTube videos and receive answers based on the video's transcript.",
   "longDescriptions": [
@@ -489,7 +531,7 @@ const projects: Project[] = [
 
  
   {
-  id: 13,
+  id: 15,
   title: "Syntaxly.ai",
   description: "AI-Powered Code Reviewer for Developers.",
   longDescriptions: [
@@ -510,7 +552,7 @@ const projects: Project[] = [
 },
 
 {
-  id: 14,
+  id: 16,
   title: "FormForge.ai – AI Form Generator",
   description:
     "An AI-powered tool that converts natural language prompts into clean JSON form schemas and instantly renders a fully styled, production-ready UI.",
@@ -561,7 +603,7 @@ const projects: Project[] = [
 
 
  {
-    id: 15,
+    id: 17,
     title: "Bonzo Games",
     description: "A happy place where you can play classic games for some fun.",
     longDescriptions: [
@@ -582,7 +624,7 @@ const projects: Project[] = [
   },
  
   {
-    id: 16,
+    id: 18,
     title: "Multithreaded Java Web Server",
     description: "A high-performance TCP server in Java supporting multiple concurrent clients using a thread pool.",
     longDescriptions: [
@@ -603,7 +645,7 @@ const projects: Project[] = [
   },
 
   {
-    "id": 17,
+    "id": 19,
     "title": "Locatrix : Live Location Tracker",
     "description": "A real-time web application that visualizes and shares users’ live GPS positions using Leaflet, OpenStreetMap, and Socket.IO for instant updates.",
     "longDescriptions": [
