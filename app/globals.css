@@ -81,3 +81,64 @@ body.modal-open {
 html {
   scroll-behavior: smooth;
 }
+
+
+
+
+
+
+
+/* ================================
+   GLOBAL PURPLE DESIGNER SCROLLBAR
+   ================================ */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #8b5cf6 #0f0a1f;
+}
+
+/* WebKit Browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(
+    180deg,
+    #0f0a1f,
+    #160f2f
+  );
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #a855f7,
+    #7c3aed
+  );
+  border-radius: 10px;
+  border: 2px solid #160f2f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    #c084fc,
+    #8b5cf6
+  );
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(
+    180deg,
+    #9333ea,
+    #6d28d9
+  );
+}
+
+::-webkit-scrollbar-corner {
+  background: #0f0a1f;
+}
