@@ -200,7 +200,7 @@ const projects: Project[] = [
     "Alison is a cutting-edge development platform that eliminates the need for local environments or heavy cloud VMs. By leveraging WebContainers, it boots a secure, full-stack Node.js environment directly inside your browser tab in milliseconds.",
     "The platform features a deeply integrated AI Copilot capable of reading your file system, generating complex components, and performing surgical code refactors. With a fully functional Xterm.js terminal and instant hot-reloading preview, Alison provides a complete development lifecycle from prompt to deployment."
   ],
-  "images": ["/project/Alison.png", "/project/alison1.png", "/project/alison2.png"],
+  "images": ["/project/alison.png", "/project/alison1.png", "/project/alison2.png"],
   "video": "/project/alison.mp4",
   "link": "https://ai-powered-browser-ide-project.vercel.app/",
   "sourceCode": "https://github.com/vikasgautam2003/AI-Powered-Browser-IDE-Project",
